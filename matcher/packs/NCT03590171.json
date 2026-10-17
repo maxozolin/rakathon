@@ -1,0 +1,228 @@
+{
+  "schema_version": "avicenna.criteria-pack/0.1",
+  "pack_id": "NCT03590171@2026-03-17/trial-pack-builder-llm/1.0.0",
+  "trial_id": "NCT03590171",
+  "criteria_completeness": "partial",
+  "generated_at": "2026-10-17T00:00:00Z",
+  "arms": [
+    {
+      "arm_id": "main",
+      "arm_name": "All participants",
+      "study_type": "interventional"
+    }
+  ],
+  "criteria": [
+    {
+      "criterion_id": "inc:age-max",
+      "criterion_type": "inclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Maximum age: 17.0 Years (registry structured field)",
+      "atoms": [
+        {
+          "atom_id": "a",
+          "predicate_type": "simple_comparison",
+          "arm_scope": null,
+          "source_text": "Age ≤ 17.0 years",
+          "fact_key": "demographics.age",
+          "comparator": "le",
+          "threshold": {
+            "value": 17.0,
+            "unit": "a"
+          }
+        }
+      ],
+      "completeness_note": "complete"
+    },
+    {
+      "criterion_id": "inc:b0",
+      "criterion_type": "inclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Morphologically confirmed diagnosis of 1st relapsed precursor B-cell or T-cell ALL",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "inc:b1",
+      "criterion_type": "inclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Children less than 18 years of age at date of inclusion into the study",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "inc:b2",
+      "criterion_type": "inclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Meeting HR criteria any BM relapse, early/very early isolated BM relapse, very early isolated/combined extramedullary relapse)",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "inc:b3",
+      "criterion_type": "inclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Patient enrolled in a participating centre",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "inc:b4",
+      "criterion_type": "inclusion",
+      "hardness": "procedural_pre_screen",
+      "arm_scope": null,
+      "source_text": "Written informed consent",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "inc:b5",
+      "criterion_type": "inclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Start of treatment falling into the study period",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "inc:b6",
+      "criterion_type": "inclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "No participation in other clinical trials 30 day prior to study enrolment that interfere with this protocol, except trials for primary ALL",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "exc:b0",
+      "criterion_type": "exclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Breakpoint cluster region-Abelson (BCR-ABL)/ t(9;22) positive ALL",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "exc:pregnant",
+      "criterion_type": "exclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Pregnancy or positive pregnancy test (urine sample positive for β-humane choriongonadotropin (HCG) \\> 10 U/l)",
+      "atoms": [
+        {
+          "atom_id": "a",
+          "predicate_type": "simple_comparison",
+          "arm_scope": null,
+          "source_text": "Pregnancy or positive pregnancy test (urine sample positive for β-humane choriongonadotropin (HCG) \\> 10 U/l)",
+          "fact_key": "safety.pregnant",
+          "comparator": "eq",
+          "threshold": true
+        }
+      ],
+      "completeness_note": "complete"
+    },
+    {
+      "criterion_id": "exc:b2",
+      "criterion_type": "exclusion",
+      "hardness": "procedural_pre_screen",
+      "arm_scope": null,
+      "source_text": "Sexually active adolescents not willing to use highly effective contraceptive method (pearl index \\<1) until 12 months after end of anti-leukemic therapy",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "exc:b3",
+      "criterion_type": "exclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Breast feeding",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "exc:b4",
+      "criterion_type": "exclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Relapse post allogeneic stem-cell transplantation",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "exc:b5",
+      "criterion_type": "exclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Neuropathy \\> II°",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "exc:b6",
+      "criterion_type": "exclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "The whole protocol or essential parts are declined either by patient himself/herself or the respective legal guardian",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "exc:b7",
+      "criterion_type": "exclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Objection to the study participation by a minor patient, able to object",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "exc:b8",
+      "criterion_type": "exclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Any patient being dependent on the investigator",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "exc:b9",
+      "criterion_type": "exclusion",
+      "hardness": "procedural_pre_screen",
+      "arm_scope": null,
+      "source_text": "No consent is given for saving and propagation of pseudonymized medical data for study reasons",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "exc:b10",
+      "criterion_type": "exclusion",
+      "hardness": "procedural_pre_screen",
+      "arm_scope": null,
+      "source_text": "Severe concomitant disease that does not allow treatment according to the protocol at the investigator's discretion (e.g. malformation syndromes, cardiac malformations, metabolic disorders)",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "exc:b11",
+      "criterion_type": "exclusion",
+      "hardness": "procedural_pre_screen",
+      "arm_scope": null,
+      "source_text": "Subjects unwilling or unable to comply with the study procedures",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "exc:b12",
+      "criterion_type": "exclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Subjects who are legally detained in an official institute",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    }
+  ]
+}

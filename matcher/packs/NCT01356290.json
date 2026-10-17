@@ -1,0 +1,237 @@
+{
+  "schema_version": "avicenna.criteria-pack/0.1",
+  "pack_id": "NCT01356290@2026-10-13/trial-pack-builder-llm/1.0.0",
+  "trial_id": "NCT01356290",
+  "criteria_completeness": "partial",
+  "generated_at": "2026-10-17T00:00:00Z",
+  "arms": [
+    {
+      "arm_id": "main",
+      "arm_name": "All participants",
+      "study_type": "interventional"
+    }
+  ],
+  "criteria": [
+    {
+      "criterion_id": "inc:age-max",
+      "criterion_type": "inclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Maximum age: 19.0 Years (registry structured field)",
+      "atoms": [
+        {
+          "atom_id": "a",
+          "predicate_type": "simple_comparison",
+          "arm_scope": null,
+          "source_text": "Age ≤ 19.0 years",
+          "fact_key": "demographics.age",
+          "comparator": "le",
+          "threshold": {
+            "value": 19.0,
+            "unit": "a"
+          }
+        }
+      ],
+      "completeness_note": "complete"
+    },
+    {
+      "criterion_id": "inc:b0",
+      "criterion_type": "inclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Stratum I: Relapsed or progressive medulloblastoma - completed",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "inc:b1",
+      "criterion_type": "inclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Stratum II: Relapsed or progressive ependymoma (at least one site of untreated recurrent disease)",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "inc:b2",
+      "criterion_type": "inclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Stratum III: Relapsed or progressive ATRT (at least one site of untreated recurrent disease)",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "inc:b3",
+      "criterion_type": "inclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Stratum IV: Relapsed or progressive medulloblastoma (at least one site of untreated recurrent disease)",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "inc:b4",
+      "criterion_type": "inclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Stratum V: Relapsed or progressive CNS tumor of various histologies or patients with exclusion criteria or adult patients (explorative)",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "inc:b5",
+      "criterion_type": "inclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Histological confirmation at diagnosis or relapse Stratum IV: Confirmation of the medulloblastoma group by methylation; IDAT (Intensity Data; raw data of methylation array)",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "inc:b6",
+      "criterion_type": "inclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Female or male, aged from 0 to \\<20 years (at time of original diagnosis)",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "inc:b7",
+      "criterion_type": "inclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Participants must have normal organ and bone marrow function (ALT \\<5x institutional upper limit of normal, creatinine \\<1.5x institutional upper limit of normal for age, WBC \\>1000/mm3, platelets \\> 20,000/mm3. Patients with values less than WBC 2000/mm3 or platelets 50,000/mm3 will require initiation of treatment with etoposide and cyclophosphamide at a lower starting dose as defined within the protocol",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "inc:b8",
+      "criterion_type": "inclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Karnofsky performance status ≥50. For infants and children less than 12 years of age, the Lansky play scale ≥50% will be used",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "inc:b9",
+      "criterion_type": "inclusion",
+      "hardness": "procedural_pre_screen",
+      "arm_scope": null,
+      "source_text": "Written informed consent of patients and / or legal guardian",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "exc:b0",
+      "criterion_type": "exclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "VP- or subdural peritoneal shunt dependency (can be included in Stratum V)",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "exc:b1",
+      "criterion_type": "exclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Prior treatment with temozolomide/irinotecan (can be included in Stratum V)",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "exc:pregnant",
+      "criterion_type": "exclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "pregnancy",
+      "atoms": [
+        {
+          "atom_id": "a",
+          "predicate_type": "simple_comparison",
+          "arm_scope": null,
+          "source_text": "pregnancy",
+          "fact_key": "safety.pregnant",
+          "comparator": "eq",
+          "threshold": true
+        }
+      ],
+      "completeness_note": "complete"
+    },
+    {
+      "criterion_id": "exc:b3",
+      "criterion_type": "exclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Treatment for current relapse (surgery may be performed before MEMMAT treatment; patients with sites of disease not irradiated are still eligible for the protocol)",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "exc:b4",
+      "criterion_type": "exclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Known hypersensitivity to any of the drugs in the protocol",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "exc:b5",
+      "criterion_type": "exclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Active peptic ulcer",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "exc:b6",
+      "criterion_type": "exclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Any significant cardiovascular disease not controlled by standard therapy e.g. systemic hypertension",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "exc:b7",
+      "criterion_type": "exclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Anticipation of the need for major elective surgery during the course of the study treatment",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "exc:b8",
+      "criterion_type": "exclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Any disease or condition that contraindicates the use of the study medication/treatment or places the patient at an unacceptable risk of experiencing treatment-related complications",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "exc:b9",
+      "criterion_type": "exclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Non-healing surgical wound",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "exc:b10",
+      "criterion_type": "exclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "A bone fracture that has not satisfactorily healed",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    }
+  ]
+}

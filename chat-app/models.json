@@ -1,0 +1,82 @@
+[
+  {
+    "id": "gpt-6-1-sol-dz-eu",
+    "label": "GPT-6.1 Sol (EU Data Zone)",
+    "product": "gpt-6.1-sol",
+    "zone": "eu",
+    "kind": "chat",
+    "multimodal": true,
+    "preferred": true,
+    "notes": "Default. Strong multimodal chat via APIM OpenAI v1."
+  },
+  {
+    "id": "gpt-6-luna-dz-eu",
+    "label": "GPT-6 Luna (EU Data Zone)",
+    "product": "gpt-6-luna",
+    "zone": "eu",
+    "kind": "chat",
+    "multimodal": true,
+    "preferred": true,
+    "notes": "Cheaper EU multimodal option."
+  },
+  {
+    "id": "gpt-6-astra-global",
+    "label": "GPT-6 Astra (Global)",
+    "product": "gpt-6-astra",
+    "zone": "global",
+    "kind": "chat",
+    "multimodal": true,
+    "preferred": false,
+    "notes": "Global deployment — prefer EU for patient-adjacent demos."
+  },
+  {
+    "id": "deepseek-v4-pro-global",
+    "label": "DeepSeek-V4-Pro (Global)",
+    "product": "DeepSeek-V4-Pro",
+    "zone": "global",
+    "kind": "chat",
+    "multimodal": false,
+    "preferred": false,
+    "notes": "Text chat."
+  },
+  {
+    "id": "grok-4-7-global",
+    "label": "Grok 4.7 (Global)",
+    "product": "grok-4.7",
+    "zone": "global",
+    "kind": "chat",
+    "multimodal": true,
+    "preferred": false,
+    "notes": "xAI global chat."
+  },
+  {
+    "id": "kimi-k2-7-code-global",
+    "label": "Kimi K2.7 Code (Global)",
+    "product": "Kimi-K2.7-Code",
+    "zone": "global",
+    "kind": "chat",
+    "multimodal": false,
+    "preferred": false,
+    "notes": "Code-oriented chat."
+  },
+  {
+    "id": "mai-thinking-1-global",
+    "label": "MAI-Thinking-1 (Global)",
+    "product": "MAI-Thinking-1",
+    "zone": "global",
+    "kind": "chat",
+    "multimodal": false,
+    "preferred": false,
+    "notes": "Thinking / reasoning chat."
+  },
+  {
+    "id": "mai-image-2-5-global",
+    "label": "MAI-Image-2.5 (Global, image gen)",
+    "product": "MAI-Image-2.5",
+    "zone": "global",
+    "kind": "image",
+    "multimodal": false,
+    "preferred": false,
+    "notes": "Image generation only — not for document Q&A chat."
+  }
+]

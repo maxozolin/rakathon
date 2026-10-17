@@ -1,0 +1,344 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Avicenna Trial Result",
+  "description": "Trial-level eligibility result from matching a patient against a CriteriaPack (§8.3)",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "result_id",
+    "generated_at",
+    "trial_id",
+    "patient_ref",
+    "policy_version",
+    "trial_eligibility_state",
+    "per_arm_results",
+    "criterion_results",
+    "notes"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "avicenna.trial-result/0.1"
+    },
+    "result_id": {
+      "type": "string",
+      "description": "Unique identifier for this result"
+    },
+    "generated_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "When the result was generated (RFC 3339)"
+    },
+    "trial_id": {
+      "type": "string",
+      "description": "Registry trial identifier"
+    },
+    "patient_ref": {
+      "type": "string",
+      "description": "Opaque local pseudonymous patient reference"
+    },
+    "policy_version": {
+      "type": "string",
+      "description": "Evaluation policy version used"
+    },
+    "trial_eligibility_state": {
+      "type": "string",
+      "enum": [
+        "ineligible",
+        "eligible_pending_review",
+        "needs_chart_review",
+        "manual_review"
+      ],
+      "description": "Overall trial-level eligibility state (§8.1; no bare 'eligible')"
+    },
+    "per_arm_results": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/PerArmResult"
+      },
+      "description": "Results per arm"
+    },
+    "criterion_results": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "criterion_id",
+          "criterion_type",
+          "criterion_source_text",
+          "evaluation_state",
+          "outcome",
+          "applicable",
+          "hardness",
+          "coverage",
+          "reason_code",
+          "fact_references",
+          "atom_results",
+          "notes"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "criterion_id": {
+            "type": "string"
+          },
+          "criterion_type": {
+            "type": "string",
+            "enum": [
+              "inclusion",
+              "exclusion"
+            ]
+          },
+          "criterion_source_text": {
+            "type": "string"
+          },
+          "evaluation_state": {
+            "type": "string",
+            "enum": [
+              "evaluable",
+              "missing",
+              "stale",
+              "conflict",
+              "unsupported",
+              "not_applicable",
+              "opaque",
+              "manual_review"
+            ]
+          },
+          "outcome": {
+            "type": "string",
+            "enum": [
+              "satisfied",
+              "resolved_disqualifier",
+              "clear",
+              "unresolved",
+              "non_blocking",
+              "not_applicable"
+            ]
+          },
+          "applicable": {
+            "type": "boolean"
+          },
+          "hardness": {
+            "type": "string",
+            "enum": [
+              "hard",
+              "procedural_pre_screen"
+            ]
+          },
+          "coverage": {
+            "type": "string",
+            "enum": [
+              "full",
+              "partial",
+              "unknown"
+            ]
+          },
+          "reason_code": {
+            "oneOf": [
+              {
+                "type": "null"
+              },
+              {
+                "type": "string"
+              }
+            ]
+          },
+          "fact_references": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "fact_id",
+                "fact_key",
+                "role"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "fact_id": {
+                  "type": "string"
+                },
+                "fact_key": {
+                  "type": "string"
+                },
+                "role": {
+                  "type": "string",
+                  "enum": [
+                    "feeding",
+                    "gate",
+                    "reference",
+                    "alternative",
+                    "completeness"
+                  ]
+                }
+              }
+            }
+          },
+          "atom_results": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "atom_id",
+                "predicate_type",
+                "evaluation_state",
+                "outcome",
+                "reason_code",
+                "source_text",
+                "fact_references"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "atom_id": {
+                  "type": "string"
+                },
+                "predicate_type": {
+                  "type": "string"
+                },
+                "evaluation_state": {
+                  "type": "string",
+                  "enum": [
+                    "evaluable",
+                    "missing",
+                    "stale",
+                    "conflict",
+                    "unsupported",
+                    "not_applicable",
+                    "opaque",
+                    "manual_review"
+                  ]
+                },
+                "outcome": {
+                  "type": "string",
+                  "enum": [
+                    "satisfied",
+                    "resolved_disqualifier",
+                    "clear",
+                    "unresolved",
+                    "non_blocking",
+                    "not_applicable"
+                  ]
+                },
+                "reason_code": {
+                  "oneOf": [
+                    {
+                      "type": "null"
+                    },
+                    {
+                      "type": "string"
+                    }
+                  ]
+                },
+                "source_text": {
+                  "type": "string"
+                },
+                "fact_references": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "required": [
+                      "fact_id",
+                      "role"
+                    ],
+                    "additionalProperties": false,
+                    "properties": {
+                      "fact_id": {
+                        "type": "string"
+                      },
+                      "role": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "notes": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "notes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Trial-level notes or warnings"
+    }
+  },
+  "definitions": {
+    "PerArmResult": {
+      "type": "object",
+      "required": [
+        "arm_id",
+        "arm_eligibility_state",
+        "blocking_criteria",
+        "manual_review_criteria",
+        "evidence_coverage"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "arm_id": {
+          "type": "string",
+          "description": "Arm identifier"
+        },
+        "arm_eligibility_state": {
+          "type": "string",
+          "enum": [
+            "ineligible",
+            "eligible_pending_review",
+            "needs_chart_review",
+            "manual_review"
+          ],
+          "description": "Eligibility state for this arm (§8.1)"
+        },
+        "blocking_criteria": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Criterion IDs that block eligibility"
+        },
+        "manual_review_criteria": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Criterion IDs flagged for manual review"
+        },
+        "evidence_coverage": {
+          "type": "object",
+          "required": [
+            "assessed_percentage",
+            "unassessed_criteria",
+            "applicable_count"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "assessed_percentage": {
+              "type": "number",
+              "description": "Percentage of criteria with assessed evidence"
+            },
+            "unassessed_criteria": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Criterion IDs with unassessed evidence"
+            },
+            "applicable_count": {
+              "type": "integer",
+              "minimum": 0,
+              "description": "Denominator: applicable non-procedural criteria for this arm. 0 means nothing was assessed (assessed_percentage is then 0, never a vacuous 100)."
+            }
+          }
+        }
+      }
+    }
+  }
+}

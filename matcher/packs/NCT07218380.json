@@ -1,0 +1,346 @@
+{
+  "schema_version": "avicenna.criteria-pack/0.1",
+  "pack_id": "demo-hand-NCT07218380",
+  "trial_id": "NCT07218380",
+  "criteria_completeness": "partial",
+  "generated_at": "2026-04-01T00:00:00Z",
+  "arms": [
+    {
+      "arm_id": "main",
+      "arm_name": "All arms (demo)",
+      "study_type": "interventional"
+    }
+  ],
+  "criteria": [
+    {
+      "criterion_id": "inc:age",
+      "criterion_type": "inclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Minimum age: 18 Years (registry structured field)",
+      "atoms": [
+        {
+          "atom_id": "a",
+          "predicate_type": "simple_comparison",
+          "arm_scope": null,
+          "source_text": "Age ≥ 18 years",
+          "fact_key": "demographics.age",
+          "comparator": "ge",
+          "threshold": {
+            "value": 18,
+            "unit": "a"
+          }
+        }
+      ],
+      "completeness_note": "complete"
+    },
+    {
+      "criterion_id": "inc:uro-site",
+      "criterion_type": "inclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "… urothelial cancer (urothelium lines the urinary tract: renal pelvis, ureter, bladder, urethra)",
+      "atoms": [
+        {
+          "atom_id": "s",
+          "predicate_type": "simple_comparison",
+          "arm_scope": null,
+          "source_text": "urinary-tract primary",
+          "fact_key": "disease.primary",
+          "comparator": "in_set",
+          "threshold": [
+            {
+              "system": "ICD-10",
+              "code": "C65"
+            },
+            {
+              "system": "ICD-10",
+              "code": "C66"
+            },
+            {
+              "system": "ICD-10",
+              "code": "C67.0"
+            },
+            {
+              "system": "ICD-10",
+              "code": "C67.1"
+            },
+            {
+              "system": "ICD-10",
+              "code": "C67.2"
+            },
+            {
+              "system": "ICD-10",
+              "code": "C67.3"
+            },
+            {
+              "system": "ICD-10",
+              "code": "C67.4"
+            },
+            {
+              "system": "ICD-10",
+              "code": "C67.5"
+            },
+            {
+              "system": "ICD-10",
+              "code": "C67.6"
+            },
+            {
+              "system": "ICD-10",
+              "code": "C67.7"
+            },
+            {
+              "system": "ICD-10",
+              "code": "C67.8"
+            },
+            {
+              "system": "ICD-10",
+              "code": "C67.9"
+            },
+            {
+              "system": "ICD-10",
+              "code": "C68.0"
+            },
+            {
+              "system": "ICD-10",
+              "code": "C68.8"
+            },
+            {
+              "system": "ICD-10",
+              "code": "C68.9"
+            }
+          ]
+        }
+      ],
+      "completeness_note": "complete"
+    },
+    {
+      "criterion_id": "inc:uro",
+      "criterion_type": "inclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Have histologically confirmed … urothelial cancer. Individuals with mixed histology other than small cell or neuroendocrine carcinoma are eligible if a urothelial component is present.",
+      "atoms": [
+        {
+          "atom_id": "h",
+          "predicate_type": "simple_comparison",
+          "arm_scope": null,
+          "source_text": "urothelial carcinoma",
+          "fact_key": "disease.histology",
+          "comparator": "eq",
+          "threshold": {
+            "system": "ICD-O-3",
+            "code": "8120/3"
+          }
+        }
+      ],
+      "completeness_note": "partial"
+    },
+    {
+      "criterion_id": "inc:adv",
+      "criterion_type": "inclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "unresectable locally advanced or metastatic",
+      "atoms": [
+        {
+          "atom_id": "m",
+          "predicate_type": "simple_comparison",
+          "arm_scope": null,
+          "source_text": "metastatic",
+          "fact_key": "disease.metastatic",
+          "comparator": "eq",
+          "threshold": true
+        }
+      ],
+      "completeness_note": "partial"
+    },
+    {
+      "criterion_id": "inc:fgfr3",
+      "criterion_type": "inclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Have a … FGFR3 genetic alteration determined via molecular testing",
+      "atoms": [
+        {
+          "atom_id": "f",
+          "predicate_type": "simple_comparison",
+          "arm_scope": null,
+          "source_text": "FGFR3",
+          "fact_key": "biomarker.result",
+          "comparator": "eq",
+          "threshold": {
+            "system": "avicenna-result/1",
+            "code": "detected"
+          },
+          "concept": {
+            "system": "avicenna-marker/1",
+            "code": "FGFR3"
+          }
+        }
+      ],
+      "completeness_note": "complete"
+    },
+    {
+      "criterion_id": "inc:fgfr3-q",
+      "criterion_type": "inclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "qualifying … from a tumor or blood sample obtained at or any time after diagnosis of advanced or metastatic urothelial cancer.",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "inc:meas",
+      "criterion_type": "inclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Have measurable disease by investigator assessment defined by RECIST v1.1",
+      "atoms": [
+        {
+          "atom_id": "r",
+          "predicate_type": "simple_comparison",
+          "arm_scope": null,
+          "source_text": "RECIST-measurable",
+          "fact_key": "disease.recist_measurable",
+          "comparator": "eq",
+          "threshold": true
+        }
+      ],
+      "completeness_note": "complete"
+    },
+    {
+      "criterion_id": "inc:ecog",
+      "criterion_type": "inclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Have an ECOG performance status of 0 to 2.",
+      "atoms": [
+        {
+          "atom_id": "e",
+          "predicate_type": "simple_comparison",
+          "arm_scope": null,
+          "source_text": "ECOG ≤ 2",
+          "fact_key": "performance.status",
+          "comparator": "le",
+          "threshold": {
+            "value": 2,
+            "unit": "{ECOG}"
+          }
+        }
+      ],
+      "completeness_note": "complete"
+    },
+    {
+      "criterion_id": "inc:labs",
+      "criterion_type": "inclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Have adequate laboratory parameters",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "exc:prior",
+      "criterion_type": "exclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Have received prior systemic therapy for locally advanced or metastatic urothelial cancer (mUC).",
+      "atoms": [
+        {
+          "atom_id": "n",
+          "predicate_type": "not_exists",
+          "arm_scope": null,
+          "source_text": "prior systemic therapy, advanced",
+          "fact_key": "therapy.event",
+          "scope": {
+            "time_extent": "lifetime",
+            "concepts": [
+              "chemotherapy",
+              "immunotherapy",
+              "endocrine",
+              "targeted",
+              "adc",
+              "parp_inhibitor"
+            ],
+            "ontology_version_pin": "avicenna-seed/1.0.0",
+            "setting": "advanced"
+          }
+        }
+      ],
+      "completeness_note": "complete",
+      "logic": {
+        "op": "not"
+      }
+    },
+    {
+      "criterion_id": "exc:tox",
+      "criterion_type": "exclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Have any unresolved toxicities greater than Grade 1 CTCAE v5.0 from prior neoadjuvant or adjuvant systemic therapy.",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "exc:neuro",
+      "criterion_type": "exclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Have ongoing sensory or motor neuropathy of Grade 2 or higher",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "exc:cns",
+      "criterion_type": "exclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Have untreated or uncontrolled central nervous system (CNS) involvement",
+      "atoms": [
+        {
+          "atom_id": "c",
+          "predicate_type": "simple_comparison",
+          "arm_scope": null,
+          "source_text": "CNS metastases",
+          "fact_key": "disease.cns_metastases",
+          "comparator": "eq",
+          "threshold": true
+        }
+      ],
+      "completeness_note": "partial"
+    },
+    {
+      "criterion_id": "exc:lepto",
+      "criterion_type": "exclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "or any history of leptomeningeal disease.",
+      "atoms": [
+        {
+          "atom_id": "l",
+          "predicate_type": "simple_comparison",
+          "arm_scope": null,
+          "source_text": "leptomeningeal disease",
+          "fact_key": "disease.condition",
+          "comparator": "eq",
+          "threshold": {
+            "system": "avicenna-condition/1",
+            "code": "leptomeningeal_disease"
+          },
+          "relation": "ever"
+        }
+      ],
+      "completeness_note": "complete"
+    },
+    {
+      "criterion_id": "exc:eye",
+      "criterion_type": "exclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Current evidence corneal keratopathy or retinal disorder confirmed by ocular examination at screening.",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    }
+  ]
+}

@@ -1,0 +1,204 @@
+{
+  "schema_version": "avicenna.criteria-pack/0.1",
+  "pack_id": "NCT01949129@2026-09-04/trial-pack-builder-llm/1.0.0",
+  "trial_id": "NCT01949129",
+  "criteria_completeness": "partial",
+  "generated_at": "2026-10-17T00:00:00Z",
+  "arms": [
+    {
+      "arm_id": "main",
+      "arm_name": "All participants",
+      "study_type": "interventional"
+    }
+  ],
+  "criteria": [
+    {
+      "criterion_id": "inc:age-min",
+      "criterion_type": "inclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Minimum age: 0.0833 Years (registry structured field)",
+      "atoms": [
+        {
+          "atom_id": "a",
+          "predicate_type": "simple_comparison",
+          "arm_scope": null,
+          "source_text": "Age ≥ 0.0833 years",
+          "fact_key": "demographics.age",
+          "comparator": "ge",
+          "threshold": {
+            "value": 0.0833,
+            "unit": "a"
+          }
+        }
+      ],
+      "completeness_note": "complete"
+    },
+    {
+      "criterion_id": "inc:age-max",
+      "criterion_type": "inclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Maximum age: 18.0 Years (registry structured field)",
+      "atoms": [
+        {
+          "atom_id": "a",
+          "predicate_type": "simple_comparison",
+          "arm_scope": null,
+          "source_text": "Age ≤ 18.0 years",
+          "fact_key": "demographics.age",
+          "comparator": "le",
+          "threshold": {
+            "value": 18.0,
+            "unit": "a"
+          }
+        }
+      ],
+      "completeness_note": "complete"
+    },
+    {
+      "criterion_id": "inc:b0",
+      "criterion_type": "inclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Patients with ALL (except for patients with B-ALL) who fulfil the following criteria:",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "inc:b1",
+      "criterion_type": "inclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "age at diagnosis ≤ 18 years. Age at HSCT ≤ 21 years",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "inc:b2",
+      "criterion_type": "inclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "indication for allogeneic HSCT",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "inc:b3",
+      "criterion_type": "inclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "complete remission (CR) before HSCT",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "inc:b4",
+      "criterion_type": "inclusion",
+      "hardness": "procedural_pre_screen",
+      "arm_scope": null,
+      "source_text": "written consent of the parents (legal guardian) and, if necessary, the minor patient via \"Informed Consent Form\"",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "inc:b5",
+      "criterion_type": "inclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "no pregnancy",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "inc:b6",
+      "criterion_type": "inclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "no secondary malignancy",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "inc:b7",
+      "criterion_type": "inclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "no previous HSCT",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "inc:b8",
+      "criterion_type": "inclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "HSCT is performed in a study participating centre",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "exc:b0",
+      "criterion_type": "exclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "patients who do not fulfil the inclusion criteria",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "exc:b1",
+      "criterion_type": "exclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Non Hodgkin-Lymphoma",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "exc:b2",
+      "criterion_type": "exclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "the whole protocol or essential parts are declined either by patient himself/herself or the respective legal guardian",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "exc:b3",
+      "criterion_type": "exclusion",
+      "hardness": "procedural_pre_screen",
+      "arm_scope": null,
+      "source_text": "no consent is given for saving and propagation of anonymous medical data for study reasons",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "exc:b4",
+      "criterion_type": "exclusion",
+      "hardness": "procedural_pre_screen",
+      "arm_scope": null,
+      "source_text": "severe concomitant disease that does not allow treatment according to the protocol at the investigator's discretion (e.g. malformation syndromes, cardiac malformations, metabolic disorders)",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "exc:b5",
+      "criterion_type": "exclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Karnofsky / Lansky score \\< 50%",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "exc:b6",
+      "criterion_type": "exclusion",
+      "hardness": "procedural_pre_screen",
+      "arm_scope": null,
+      "source_text": "subjects unwilling or unable to comply with the study procedures",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    }
+  ]
+}

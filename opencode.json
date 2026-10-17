@@ -1,0 +1,69 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "model": "rakathon/gpt-6-1-sol-dz-eu",
+  "providers": {
+    "rakathon": {
+      "name": "Rakathon APIM",
+      "env": [
+        "AZURE_LLM_API_KEY"
+      ],
+      "package": "@opencode/ai/providers/openai-compatible/responses",
+      "settings": {
+        "baseURL": "https://apim-rakathon-q7146n.azure-api.net/openai/v1",
+        "apiKey": "unused",
+        "encoding": "none"
+      },
+      "headers": {
+        "api-key": "{file:./.opencode-secrets/apim-api-key}",
+        "Ocp-Apim-Subscription-Key": "{file:./.opencode-secrets/apim-api-key}"
+      },
+      "models": {
+        "gpt-6-1-sol-dz-eu": {
+          "name": "GPT-6.1 Sol (EU Data Zone)",
+          "modelID": "gpt-6-1-sol-dz-eu",
+          "limit": {
+            "context": 1050000,
+            "input": 922000,
+            "output": 128000
+          },
+          "cost": {
+            "input": 2.0,
+            "output": 10.0,
+            "cacheRead": 0.1,
+            "cacheWrite": 2.5
+          }
+        },
+        "gpt-6-luna-dz-eu": {
+          "name": "GPT-6 Luna (EU Data Zone)",
+          "modelID": "gpt-6-luna-dz-eu",
+          "limit": {
+            "context": 1050000,
+            "input": 922000,
+            "output": 128000
+          },
+          "cost": {
+            "input": 0.1,
+            "output": 0.5,
+            "cacheRead": 0.01,
+            "cacheWrite": 0.125
+          }
+        }
+      }
+    }
+  },
+  "mcp": {
+    "avicenna-trials": {
+      "type": "local",
+      "command": [
+        "uv",
+        "run",
+        "--directory",
+        "matcher",
+        "--extra",
+        "mcp",
+        "avicenna-mcp"
+      ],
+      "enabled": true
+    }
+  }
+}

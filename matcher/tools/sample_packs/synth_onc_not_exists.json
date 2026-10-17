@@ -1,0 +1,156 @@
+{
+  "schema_version": "avicenna.criteria-pack/0.1",
+  "pack_id": "pack-SYNTHETIC-onc",
+  "trial_id": "SYNTH-P7-ONC",
+  "criteria_completeness": "complete",
+  "generated_at": "2026-01-01T00:00:00Z",
+  "arms": [
+    {
+      "arm_id": "main",
+      "arm_name": "Main",
+      "study_type": "interventional"
+    }
+  ],
+  "criteria": [
+    {
+      "criterion_id": "inc:age",
+      "criterion_type": "inclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Age ≥ 18 years",
+      "atoms": [
+        {
+          "atom_id": "a",
+          "predicate_type": "simple_comparison",
+          "arm_scope": null,
+          "source_text": "Age ≥ 18 years",
+          "fact_key": "demographics.age",
+          "comparator": "ge",
+          "threshold": {
+            "value": 18,
+            "unit": "a"
+          }
+        }
+      ],
+      "completeness_note": "complete"
+    },
+    {
+      "criterion_id": "inc:ecog",
+      "criterion_type": "inclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "ECOG performance status 0 or 1",
+      "atoms": [
+        {
+          "atom_id": "a",
+          "predicate_type": "simple_comparison",
+          "arm_scope": null,
+          "source_text": "ECOG 0–1",
+          "fact_key": "performance.ecog",
+          "comparator": "le",
+          "threshold": 1
+        }
+      ],
+      "completeness_note": "complete"
+    },
+    {
+      "criterion_id": "inc:renal",
+      "criterion_type": "inclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Serum creatinine ≤ 1.5 × ULN or CrCl ≥ 50 mL/min (Cockcroft-Gault)",
+      "atoms": [
+        {
+          "atom_id": "alpha",
+          "predicate_type": "relative_to_reference",
+          "arm_scope": null,
+          "source_text": "Serum creatinine ≤ 1.5 × ULN",
+          "fact_key": "lab.creatinine",
+          "reference_key": "lab.creatinine.uln",
+          "comparator": "le",
+          "threshold": 1.5
+        },
+        {
+          "atom_id": "beta",
+          "predicate_type": "derived_value",
+          "arm_scope": null,
+          "source_text": "CrCl ≥ 50 mL/min",
+          "fact_key": "derived.crcl_cg",
+          "comparator": "ge",
+          "threshold": {
+            "value": 50,
+            "unit": "mL/min"
+          },
+          "derived_expression": "cockcroft_gault"
+        }
+      ],
+      "completeness_note": "complete",
+      "logic": {
+        "op": "any"
+      }
+    },
+    {
+      "criterion_id": "inc:no-serd",
+      "criterion_type": "inclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "No prior elacestrant for advanced disease",
+      "atoms": [
+        {
+          "atom_id": "n",
+          "predicate_type": "not_exists",
+          "arm_scope": null,
+          "source_text": "No prior SERD for advanced disease",
+          "fact_key": "tx.serd",
+          "scope": {
+            "time_extent": "lifetime",
+            "setting": "advanced",
+            "concepts": [
+              "elacestrant"
+            ]
+          }
+        }
+      ],
+      "completeness_note": "complete"
+    },
+    {
+      "criterion_id": "exc:cns",
+      "criterion_type": "exclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "History of brain metastases",
+      "atoms": [
+        {
+          "atom_id": "h",
+          "predicate_type": "simple_comparison",
+          "arm_scope": null,
+          "source_text": "History of brain metastases",
+          "fact_key": "dx.brain_mets",
+          "comparator": "eq",
+          "threshold": true,
+          "relation": "any_history"
+        }
+      ],
+      "completeness_note": "complete"
+    },
+    {
+      "criterion_id": "exc:preg",
+      "criterion_type": "exclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Pregnant or breastfeeding",
+      "atoms": [
+        {
+          "atom_id": "p",
+          "predicate_type": "simple_comparison",
+          "arm_scope": null,
+          "source_text": "Pregnant",
+          "fact_key": "status.pregnant",
+          "comparator": "eq",
+          "threshold": true
+        }
+      ],
+      "completeness_note": "complete"
+    }
+  ]
+}

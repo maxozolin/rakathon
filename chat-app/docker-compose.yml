@@ -1,0 +1,19 @@
+services:
+  chat:
+    build: .
+    ports:
+      - "8080:8080"
+    env_file:
+      - ../.env
+    environment:
+      AZURE_LLM_API_ENDPOINT: ${AZURE_LLM_API_ENDPOINT:-https://apim-rakathon-q7146n.azure-api.net/openai/v1}
+      DEFAULT_MODEL: ${DEFAULT_MODEL:-gpt-6-1-sol-dz-eu}
+      UPLOAD_DIR: /app/data/uploads
+      CTIS_DB: /data/ctis/ctis.sqlite
+      CTGOV_DB: /data/ctgov/ctgov.sqlite
+    volumes:
+      - ./data/uploads:/app/data/uploads
+      - ./models.json:/app/models.json:ro
+      - ../data/ctis:/data/ctis:ro
+      - ../data/ctgov:/data/ctgov:ro
+    restart: unless-stopped

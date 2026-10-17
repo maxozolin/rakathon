@@ -1,0 +1,89 @@
+{
+  "schema_version": "avicenna.criteria-pack/0.1",
+  "pack_id": "pack-SYNTHETIC-basket",
+  "trial_id": "SYNTH-P7-BASKET",
+  "criteria_completeness": "complete",
+  "generated_at": "2026-01-01T00:00:00Z",
+  "arms": [
+    {
+      "arm_id": "A",
+      "arm_name": "Cohort A (HER2-low)",
+      "study_type": "interventional"
+    },
+    {
+      "arm_id": "B",
+      "arm_name": "Cohort B (HER2-0)",
+      "study_type": "interventional"
+    }
+  ],
+  "criteria": [
+    {
+      "criterion_id": "inc:age",
+      "criterion_type": "inclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Age ≥ 18 years",
+      "atoms": [
+        {
+          "atom_id": "a",
+          "predicate_type": "simple_comparison",
+          "arm_scope": null,
+          "source_text": "Age ≥ 18 years",
+          "fact_key": "demographics.age",
+          "comparator": "ge",
+          "threshold": {
+            "value": 18,
+            "unit": "a"
+          }
+        }
+      ],
+      "completeness_note": "complete"
+    },
+    {
+      "criterion_id": "inc:her2-a",
+      "criterion_type": "inclusion",
+      "hardness": "hard",
+      "arm_scope": "A",
+      "source_text": "HER2-low (Cohort A)",
+      "atoms": [
+        {
+          "atom_id": "h",
+          "predicate_type": "simple_comparison",
+          "arm_scope": null,
+          "source_text": "HER2-low",
+          "fact_key": "biomarker.her2_status",
+          "comparator": "eq",
+          "threshold": {
+            "kind": "coded",
+            "system": "local",
+            "code": "HER2-low"
+          }
+        }
+      ],
+      "completeness_note": "complete"
+    },
+    {
+      "criterion_id": "inc:her2-b",
+      "criterion_type": "inclusion",
+      "hardness": "hard",
+      "arm_scope": "B",
+      "source_text": "HER2-0 (Cohort B)",
+      "atoms": [
+        {
+          "atom_id": "h",
+          "predicate_type": "simple_comparison",
+          "arm_scope": null,
+          "source_text": "HER2-0",
+          "fact_key": "biomarker.her2_status",
+          "comparator": "eq",
+          "threshold": {
+            "kind": "coded",
+            "system": "local",
+            "code": "HER2-0"
+          }
+        }
+      ],
+      "completeness_note": "complete"
+    }
+  ]
+}

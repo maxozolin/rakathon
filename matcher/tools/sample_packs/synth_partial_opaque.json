@@ -1,0 +1,66 @@
+{
+  "schema_version": "avicenna.criteria-pack/0.1",
+  "pack_id": "pack-SYNTHETIC-partial",
+  "trial_id": "SYNTH-P7-PARTIAL",
+  "criteria_completeness": "partial",
+  "generated_at": "2026-01-01T00:00:00Z",
+  "arms": [
+    {
+      "arm_id": "main",
+      "arm_name": "Main",
+      "study_type": "interventional"
+    }
+  ],
+  "criteria": [
+    {
+      "criterion_id": "inc:age",
+      "criterion_type": "inclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Age ≥ 18 years",
+      "atoms": [
+        {
+          "atom_id": "a",
+          "predicate_type": "simple_comparison",
+          "arm_scope": null,
+          "source_text": "Age ≥ 18 years",
+          "fact_key": "demographics.age",
+          "comparator": "ge",
+          "threshold": {
+            "value": 18,
+            "unit": "a"
+          }
+        }
+      ],
+      "completeness_note": "complete"
+    },
+    {
+      "criterion_id": "exc:comorb",
+      "criterion_type": "exclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Active infection or other uncontrolled illness (partially atomized)",
+      "atoms": [
+        {
+          "atom_id": "x",
+          "predicate_type": "simple_comparison",
+          "arm_scope": null,
+          "source_text": "Active infection",
+          "fact_key": "dx.active_infection",
+          "comparator": "eq",
+          "threshold": true
+        }
+      ],
+      "completeness_note": "partial"
+    },
+    {
+      "criterion_id": "exc:judg",
+      "criterion_type": "exclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Any condition that in the opinion of the investigator would interfere with study participation",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    }
+  ]
+}

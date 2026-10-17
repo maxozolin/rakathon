@@ -1,0 +1,150 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Avicenna Criterion Result",
+  "description": "Result of evaluating a single criterion against a patient packet (§8.2)",
+  "type": "object",
+  "required": [
+    "criterion_id",
+    "criterion_type",
+    "criterion_source_text",
+    "evaluation_state",
+    "outcome",
+    "applicable",
+    "hardness",
+    "coverage",
+    "reason_code",
+    "fact_references",
+    "atom_results",
+    "notes"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "criterion_id": {
+      "type": "string",
+      "description": "Unique identifier of the criterion"
+    },
+    "criterion_type": {
+      "type": "string",
+      "enum": ["inclusion", "exclusion"],
+      "description": "Type of criterion"
+    },
+    "criterion_source_text": {
+      "type": "string",
+      "description": "Verbatim or paraphrased source text of the criterion"
+    },
+    "evaluation_state": {
+      "type": "string",
+      "enum": ["evaluable", "missing", "stale", "conflict", "unsupported", "not_applicable", "opaque", "manual_review"],
+      "description": "State of the evaluation (§8.1)"
+    },
+    "outcome": {
+      "type": "string",
+      "enum": ["satisfied", "resolved_disqualifier", "clear", "unresolved", "non_blocking", "not_applicable"],
+      "description": "Outcome after polarity applied (§8.2)"
+    },
+    "applicable": {
+      "type": "boolean",
+      "description": "True if criterion is applicable to this patient; false means not_applicable"
+    },
+    "hardness": {
+      "type": "string",
+      "enum": ["hard", "procedural_pre_screen"],
+      "description": "Hardness of this criterion"
+    },
+    "coverage": {
+      "type": "string",
+      "enum": ["full", "partial", "unknown"],
+      "description": "Coverage quality of the evidence"
+    },
+    "reason_code": {
+      "oneOf": [
+        {"type": "null"},
+        {"type": "string"}
+      ],
+      "description": "Reason code if outcome is UNKNOWN or not_applicable"
+    },
+    "fact_references": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["fact_id", "fact_key", "role"],
+        "additionalProperties": false,
+        "properties": {
+          "fact_id": {
+            "type": "string"
+          },
+          "fact_key": {
+            "type": "string"
+          },
+          "role": {
+            "type": "string",
+            "enum": ["feeding", "gate", "reference", "alternative", "completeness"],
+            "description": "Role this fact played in the evaluation"
+          }
+        }
+      },
+      "description": "Facts that fed into this result"
+    },
+    "atom_results": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/AtomResult"
+      },
+      "description": "Results for individual atoms"
+    },
+    "notes": {
+      "type": "array",
+      "items": {"type": "string"},
+      "description": "Human-readable notes or warnings"
+    }
+  },
+  "definitions": {
+    "AtomResult": {
+      "type": "object",
+      "required": [
+        "atom_id",
+        "predicate_type",
+        "evaluation_state",
+        "outcome",
+        "reason_code",
+        "source_text",
+        "fact_references"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "atom_id": {
+          "type": "string"
+        },
+        "predicate_type": {
+          "type": "string"
+        },
+        "evaluation_state": {
+          "type": "string",
+          "enum": ["evaluable", "missing", "stale", "conflict", "unsupported", "not_applicable", "opaque", "manual_review"]
+        },
+        "outcome": {
+          "type": "string",
+          "enum": ["satisfied", "resolved_disqualifier", "clear", "unresolved", "non_blocking", "not_applicable"]
+        },
+        "reason_code": {
+          "oneOf": [{"type": "null"}, {"type": "string"}]
+        },
+        "source_text": {
+          "type": "string"
+        },
+        "fact_references": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["fact_id", "role"],
+            "additionalProperties": false,
+            "properties": {
+              "fact_id": {"type": "string"},
+              "role": {"type": "string"}
+            }
+          }
+        }
+      }
+    }
+  }
+}

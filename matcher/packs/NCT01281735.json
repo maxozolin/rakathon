@@ -1,0 +1,65 @@
+{
+  "schema_version": "avicenna.criteria-pack/0.1",
+  "pack_id": "NCT01281735@2024-01-17/trial-pack-builder-llm/1.0.0",
+  "trial_id": "NCT01281735",
+  "criteria_completeness": "partial",
+  "generated_at": "2026-10-17T00:00:00Z",
+  "arms": [
+    {
+      "arm_id": "main",
+      "arm_name": "All participants",
+      "study_type": "observational"
+    }
+  ],
+  "criteria": [
+    {
+      "criterion_id": "inc:age-max",
+      "criterion_type": "inclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Maximum age: 18.0 Years (registry structured field)",
+      "atoms": [
+        {
+          "atom_id": "a",
+          "predicate_type": "simple_comparison",
+          "arm_scope": null,
+          "source_text": "Age ≤ 18.0 years",
+          "fact_key": "demographics.age",
+          "comparator": "le",
+          "threshold": {
+            "value": 18.0,
+            "unit": "a"
+          }
+        }
+      ],
+      "completeness_note": "complete"
+    },
+    {
+      "criterion_id": "inc:b0",
+      "criterion_type": "inclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "patients less than 18 years of age",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "inc:b1",
+      "criterion_type": "inclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "diagnosed Philadelphia positive and/or BCR-ABL positive Chronic Myeloid Leukemia (CML) all phases",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "exc:b0",
+      "criterion_type": "exclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "patients more than 18 years of age at diagnosis of CML",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    }
+  ]
+}

@@ -1,0 +1,376 @@
+{
+  "schema_version": "avicenna.criteria-pack/0.1",
+  "pack_id": "demo-hand-NCT07062965",
+  "trial_id": "NCT07062965",
+  "criteria_completeness": "partial",
+  "generated_at": "2026-04-01T00:00:00Z",
+  "arms": [
+    {
+      "arm_id": "main",
+      "arm_name": "All arms (demo)",
+      "study_type": "interventional"
+    }
+  ],
+  "criteria": [
+    {
+      "criterion_id": "inc:age",
+      "criterion_type": "inclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Minimum age: 18 Years (registry structured field)",
+      "atoms": [
+        {
+          "atom_id": "a",
+          "predicate_type": "simple_comparison",
+          "arm_scope": null,
+          "source_text": "Age ≥ 18 years",
+          "fact_key": "demographics.age",
+          "comparator": "ge",
+          "threshold": {
+            "value": 18,
+            "unit": "a"
+          }
+        }
+      ],
+      "completeness_note": "complete"
+    },
+    {
+      "criterion_id": "inc:breast",
+      "criterion_type": "inclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Confirmed diagnosis of … breast cancer",
+      "atoms": [
+        {
+          "atom_id": "d",
+          "predicate_type": "simple_comparison",
+          "arm_scope": null,
+          "source_text": "breast cancer",
+          "fact_key": "disease.primary",
+          "comparator": "in_set",
+          "threshold": [
+            {
+              "system": "ICD-10",
+              "code": "C50.0"
+            },
+            {
+              "system": "ICD-10",
+              "code": "C50.1"
+            },
+            {
+              "system": "ICD-10",
+              "code": "C50.2"
+            },
+            {
+              "system": "ICD-10",
+              "code": "C50.3"
+            },
+            {
+              "system": "ICD-10",
+              "code": "C50.4"
+            },
+            {
+              "system": "ICD-10",
+              "code": "C50.5"
+            },
+            {
+              "system": "ICD-10",
+              "code": "C50.6"
+            },
+            {
+              "system": "ICD-10",
+              "code": "C50.7"
+            },
+            {
+              "system": "ICD-10",
+              "code": "C50.8"
+            },
+            {
+              "system": "ICD-10",
+              "code": "C50.9"
+            }
+          ]
+        }
+      ],
+      "completeness_note": "complete"
+    },
+    {
+      "criterion_id": "inc:hr",
+      "criterion_type": "inclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "HR-positive",
+      "atoms": [
+        {
+          "atom_id": "er",
+          "predicate_type": "simple_comparison",
+          "arm_scope": null,
+          "source_text": "ER+",
+          "fact_key": "biomarker.result",
+          "comparator": "eq",
+          "threshold": {
+            "system": "avicenna-result/1",
+            "code": "positive"
+          },
+          "concept": {
+            "system": "avicenna-marker/1",
+            "code": "ER"
+          }
+        },
+        {
+          "atom_id": "pr",
+          "predicate_type": "simple_comparison",
+          "arm_scope": null,
+          "source_text": "PR+",
+          "fact_key": "biomarker.result",
+          "comparator": "eq",
+          "threshold": {
+            "system": "avicenna-result/1",
+            "code": "positive"
+          },
+          "concept": {
+            "system": "avicenna-marker/1",
+            "code": "PR"
+          }
+        }
+      ],
+      "completeness_note": "complete",
+      "logic": {
+        "op": "any"
+      }
+    },
+    {
+      "criterion_id": "inc:her2",
+      "criterion_type": "inclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "HER2-negative",
+      "atoms": [
+        {
+          "atom_id": "h",
+          "predicate_type": "simple_comparison",
+          "arm_scope": null,
+          "source_text": "HER2−",
+          "fact_key": "biomarker.result",
+          "comparator": "eq",
+          "threshold": {
+            "system": "avicenna-result/1",
+            "code": "negative"
+          },
+          "concept": {
+            "system": "avicenna-marker/1",
+            "code": "HER2"
+          }
+        }
+      ],
+      "completeness_note": "complete"
+    },
+    {
+      "criterion_id": "inc:adv",
+      "criterion_type": "inclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "with evidence of locally advanced or metastatic disease",
+      "atoms": [
+        {
+          "atom_id": "m",
+          "predicate_type": "simple_comparison",
+          "arm_scope": null,
+          "source_text": "locally advanced or metastatic",
+          "fact_key": "disease.metastatic",
+          "comparator": "eq",
+          "threshold": true
+        },
+        {
+          "atom_id": "l",
+          "predicate_type": "simple_comparison",
+          "arm_scope": null,
+          "source_text": "locally advanced or metastatic",
+          "fact_key": "disease.locally_advanced",
+          "comparator": "eq",
+          "threshold": true
+        }
+      ],
+      "completeness_note": "complete",
+      "logic": {
+        "op": "any"
+      }
+    },
+    {
+      "criterion_id": "inc:noncur",
+      "criterion_type": "inclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "which is not amenable to surgical resection or radiation therapy with curative intent",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "inc:cdk",
+      "criterion_type": "inclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Prior CDK4/6 inhibitor therapy in combination with endocrine therapy in advance metastatic setting or in adjuvant setting with documented progression during or within 12 months after the last dose of CDK4/6i.",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "inc:meas",
+      "criterion_type": "inclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Measurable disease evaluable per RECIST v.1.1 or non-measurable bone-only disease",
+      "atoms": [
+        {
+          "atom_id": "r",
+          "predicate_type": "simple_comparison",
+          "arm_scope": null,
+          "source_text": "RECIST-measurable",
+          "fact_key": "disease.recist_measurable",
+          "comparator": "eq",
+          "threshold": true
+        }
+      ],
+      "completeness_note": "partial"
+    },
+    {
+      "criterion_id": "inc:ecog",
+      "criterion_type": "inclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "ECOG Performance Status 0 or 1",
+      "atoms": [
+        {
+          "atom_id": "e",
+          "predicate_type": "simple_comparison",
+          "arm_scope": null,
+          "source_text": "ECOG ≤ 1",
+          "fact_key": "performance.status",
+          "comparator": "le",
+          "threshold": {
+            "value": 1,
+            "unit": "{ECOG}"
+          }
+        }
+      ],
+      "completeness_note": "complete"
+    },
+    {
+      "criterion_id": "exc:pik3",
+      "criterion_type": "exclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Documented detectable PIK3CA/AKT1/PTEN alterations in tissue",
+      "atoms": [
+        {
+          "atom_id": "p",
+          "predicate_type": "simple_comparison",
+          "arm_scope": null,
+          "source_text": "PIK3CA",
+          "fact_key": "biomarker.result",
+          "comparator": "eq",
+          "threshold": {
+            "system": "avicenna-result/1",
+            "code": "detected"
+          },
+          "concept": {
+            "system": "avicenna-marker/1",
+            "code": "PIK3CA"
+          }
+        },
+        {
+          "atom_id": "k",
+          "predicate_type": "simple_comparison",
+          "arm_scope": null,
+          "source_text": "AKT1",
+          "fact_key": "biomarker.result",
+          "comparator": "eq",
+          "threshold": {
+            "system": "avicenna-result/1",
+            "code": "detected"
+          },
+          "concept": {
+            "system": "avicenna-marker/1",
+            "code": "AKT1"
+          }
+        },
+        {
+          "atom_id": "t",
+          "predicate_type": "simple_comparison",
+          "arm_scope": null,
+          "source_text": "PTEN",
+          "fact_key": "biomarker.result",
+          "comparator": "eq",
+          "threshold": {
+            "system": "avicenna-result/1",
+            "code": "detected"
+          },
+          "concept": {
+            "system": "avicenna-marker/1",
+            "code": "PTEN"
+          }
+        }
+      ],
+      "completeness_note": "partial",
+      "logic": {
+        "op": "any"
+      }
+    },
+    {
+      "criterion_id": "exc:lines",
+      "criterion_type": "exclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Received greater than two prior lines of systemic therapy in the advance or metastatic setting",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "exc:chemo",
+      "criterion_type": "exclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Had received any prior chemotherapy, including antibody drug conjugates (ADCs), in advance or metastatic setting. … (neo)adjuvant … not excluded.",
+      "atoms": [
+        {
+          "atom_id": "n",
+          "predicate_type": "not_exists",
+          "arm_scope": null,
+          "source_text": "prior chemo/ADC, advanced",
+          "fact_key": "therapy.event",
+          "scope": {
+            "time_extent": "lifetime",
+            "concepts": [
+              "chemotherapy",
+              "adc"
+            ],
+            "ontology_version_pin": "avicenna-seed/1.0.0",
+            "setting": "advanced"
+          }
+        }
+      ],
+      "completeness_note": "complete",
+      "logic": {
+        "op": "not"
+      }
+    },
+    {
+      "criterion_id": "exc:med",
+      "criterion_type": "exclusion",
+      "hardness": "procedural_pre_screen",
+      "arm_scope": null,
+      "source_text": "Any medical or psychiatric condition that may increase the risk of study participation or make the participant inappropriate for the study.",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "exc:organ",
+      "criterion_type": "exclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Renal impairment, hepatic dysfunction, or hematologic abnormalities.",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    }
+  ]
+}

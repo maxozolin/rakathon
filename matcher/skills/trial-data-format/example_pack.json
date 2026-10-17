@@ -1,0 +1,359 @@
+{
+  "schema_version": "avicenna.criteria-pack/0.1",
+  "pack_id": "demo-hand-NCT06252649",
+  "trial_id": "NCT06252649",
+  "criteria_completeness": "partial",
+  "generated_at": "2026-04-01T00:00:00Z",
+  "arms": [
+    {
+      "arm_id": "main",
+      "arm_name": "All arms (demo)",
+      "study_type": "interventional"
+    }
+  ],
+  "criteria": [
+    {
+      "criterion_id": "inc:age",
+      "criterion_type": "inclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Minimum age: 18 Years (registry structured field)",
+      "atoms": [
+        {
+          "atom_id": "a",
+          "predicate_type": "simple_comparison",
+          "arm_scope": null,
+          "source_text": "Age ≥ 18 years",
+          "fact_key": "demographics.age",
+          "comparator": "ge",
+          "threshold": {
+            "value": 18,
+            "unit": "a"
+          }
+        }
+      ],
+      "completeness_note": "complete"
+    },
+    {
+      "criterion_id": "inc:crc",
+      "criterion_type": "inclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Pathologically documented … colorectal …",
+      "atoms": [
+        {
+          "atom_id": "d",
+          "predicate_type": "simple_comparison",
+          "arm_scope": null,
+          "source_text": "CRC",
+          "fact_key": "disease.primary",
+          "comparator": "in_set",
+          "threshold": [
+            {
+              "system": "ICD-10",
+              "code": "C18.0"
+            },
+            {
+              "system": "ICD-10",
+              "code": "C18.1"
+            },
+            {
+              "system": "ICD-10",
+              "code": "C18.2"
+            },
+            {
+              "system": "ICD-10",
+              "code": "C18.3"
+            },
+            {
+              "system": "ICD-10",
+              "code": "C18.4"
+            },
+            {
+              "system": "ICD-10",
+              "code": "C18.5"
+            },
+            {
+              "system": "ICD-10",
+              "code": "C18.6"
+            },
+            {
+              "system": "ICD-10",
+              "code": "C18.7"
+            },
+            {
+              "system": "ICD-10",
+              "code": "C18.8"
+            },
+            {
+              "system": "ICD-10",
+              "code": "C18.9"
+            },
+            {
+              "system": "ICD-10",
+              "code": "C19"
+            },
+            {
+              "system": "ICD-10",
+              "code": "C20"
+            }
+          ]
+        }
+      ],
+      "completeness_note": "complete"
+    },
+    {
+      "criterion_id": "inc:adeno",
+      "criterion_type": "inclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "… adenocarcinoma …",
+      "atoms": [
+        {
+          "atom_id": "h",
+          "predicate_type": "simple_comparison",
+          "arm_scope": null,
+          "source_text": "adenocarcinoma",
+          "fact_key": "disease.histology",
+          "comparator": "eq",
+          "threshold": {
+            "system": "ICD-O-3",
+            "code": "8140/3"
+          }
+        }
+      ],
+      "completeness_note": "complete"
+    },
+    {
+      "criterion_id": "inc:met",
+      "criterion_type": "inclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "… metastatic …",
+      "atoms": [
+        {
+          "atom_id": "m",
+          "predicate_type": "simple_comparison",
+          "arm_scope": null,
+          "source_text": "metastatic",
+          "fact_key": "disease.metastatic",
+          "comparator": "eq",
+          "threshold": true
+        }
+      ],
+      "completeness_note": "complete"
+    },
+    {
+      "criterion_id": "inc:g12c",
+      "criterion_type": "inclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "… with KRAS p.G12C mutation …",
+      "atoms": [
+        {
+          "atom_id": "k",
+          "predicate_type": "simple_comparison",
+          "arm_scope": null,
+          "source_text": "KRAS G12C",
+          "fact_key": "biomarker.result",
+          "comparator": "eq",
+          "threshold": {
+            "system": "avicenna-result/1",
+            "code": "detected"
+          },
+          "concept": {
+            "system": "avicenna-marker/1",
+            "code": "KRAS_G12C"
+          }
+        }
+      ],
+      "completeness_note": "complete"
+    },
+    {
+      "criterion_id": "inc:g12c-assay",
+      "criterion_type": "inclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "… by a locally validated assay.",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "inc:central",
+      "criterion_type": "inclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Central laboratory detection of KRAS p.G12C mutation.",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "inc:meas",
+      "criterion_type": "inclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Measurable metastatic disease per RECIST v1.1 criteria.",
+      "atoms": [
+        {
+          "atom_id": "r",
+          "predicate_type": "simple_comparison",
+          "arm_scope": null,
+          "source_text": "RECIST-measurable",
+          "fact_key": "disease.recist_measurable",
+          "comparator": "eq",
+          "threshold": true
+        }
+      ],
+      "completeness_note": "complete"
+    },
+    {
+      "criterion_id": "inc:ecog",
+      "criterion_type": "inclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "ECOG Performance Status of ≤ 1.",
+      "atoms": [
+        {
+          "atom_id": "e",
+          "predicate_type": "simple_comparison",
+          "arm_scope": null,
+          "source_text": "ECOG ≤ 1",
+          "fact_key": "performance.status",
+          "comparator": "le",
+          "threshold": {
+            "value": 1,
+            "unit": "{ECOG}"
+          }
+        }
+      ],
+      "completeness_note": "complete"
+    },
+    {
+      "criterion_id": "inc:organ",
+      "criterion_type": "inclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Adequate organ function.",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "exc:brain",
+      "criterion_type": "exclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Active, untreated brain metastases.",
+      "atoms": [
+        {
+          "atom_id": "c",
+          "predicate_type": "simple_comparison",
+          "arm_scope": null,
+          "source_text": "brain metastases",
+          "fact_key": "disease.cns_metastases",
+          "comparator": "eq",
+          "threshold": true
+        }
+      ],
+      "completeness_note": "partial"
+    },
+    {
+      "criterion_id": "exc:lepto",
+      "criterion_type": "exclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Leptomeningeal disease",
+      "atoms": [
+        {
+          "atom_id": "l",
+          "predicate_type": "simple_comparison",
+          "arm_scope": null,
+          "source_text": "leptomeningeal disease",
+          "fact_key": "disease.condition",
+          "comparator": "eq",
+          "threshold": {
+            "system": "avicenna-condition/1",
+            "code": "leptomeningeal_disease"
+          },
+          "relation": "current"
+        }
+      ],
+      "completeness_note": "complete"
+    },
+    {
+      "criterion_id": "exc:g12ci",
+      "criterion_type": "exclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Previous treatment with a KRAS p.G12C inhibitor",
+      "atoms": [
+        {
+          "atom_id": "n",
+          "predicate_type": "not_exists",
+          "arm_scope": null,
+          "source_text": "prior sotorasib/adagrasib",
+          "fact_key": "therapy.event",
+          "scope": {
+            "time_extent": "lifetime",
+            "concepts": [
+              "sotorasib",
+              "adagrasib"
+            ],
+            "ontology_version_pin": "avicenna-seed/1.0.0"
+          }
+        }
+      ],
+      "completeness_note": "complete",
+      "logic": {
+        "op": "not"
+      }
+    },
+    {
+      "criterion_id": "exc:ild-hx",
+      "criterion_type": "exclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "History of interstitial pneumonitis or pulmonary fibrosis",
+      "atoms": [
+        {
+          "atom_id": "i",
+          "predicate_type": "simple_comparison",
+          "arm_scope": null,
+          "source_text": "interstitial pneumonitis",
+          "fact_key": "disease.condition",
+          "comparator": "eq",
+          "threshold": {
+            "system": "avicenna-condition/1",
+            "code": "interstitial_pneumonitis"
+          },
+          "relation": "ever"
+        },
+        {
+          "atom_id": "f",
+          "predicate_type": "simple_comparison",
+          "arm_scope": null,
+          "source_text": "pulmonary fibrosis",
+          "fact_key": "disease.condition",
+          "comparator": "eq",
+          "threshold": {
+            "system": "avicenna-condition/1",
+            "code": "pulmonary_fibrosis"
+          },
+          "relation": "ever"
+        }
+      ],
+      "completeness_note": "complete",
+      "logic": {
+        "op": "any"
+      }
+    },
+    {
+      "criterion_id": "exc:ild-ct",
+      "criterion_type": "exclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "or evidence of interstitial pneumonitis or pulmonary fibrosis on baseline CT scan",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    }
+  ]
+}

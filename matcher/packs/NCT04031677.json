@@ -1,0 +1,346 @@
+{
+  "schema_version": "avicenna.criteria-pack/0.1",
+  "pack_id": "NCT04031677@2026-10-07/trial-pack-builder-llm/1.0.0",
+  "trial_id": "NCT04031677",
+  "criteria_completeness": "partial",
+  "generated_at": "2026-10-17T00:00:00Z",
+  "arms": [
+    {
+      "arm_id": "main",
+      "arm_name": "All participants",
+      "study_type": "interventional"
+    }
+  ],
+  "criteria": [
+    {
+      "criterion_id": "inc:age-min",
+      "criterion_type": "inclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Minimum age: 18.0 Years (registry structured field)",
+      "atoms": [
+        {
+          "atom_id": "a",
+          "predicate_type": "simple_comparison",
+          "arm_scope": null,
+          "source_text": "Age ≥ 18.0 years",
+          "fact_key": "demographics.age",
+          "comparator": "ge",
+          "threshold": {
+            "value": 18.0,
+            "unit": "a"
+          }
+        }
+      ],
+      "completeness_note": "complete"
+    },
+    {
+      "criterion_id": "inc:b0",
+      "criterion_type": "inclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "STRASS 2",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "inc:b1",
+      "criterion_type": "inclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Histologically proven primary high risk leiomyosarcoma (LMS) or Liposarcoma (LPS) of retroperitoneal space or infra-peritoneal spaces of pelvis.",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "inc:b2",
+      "criterion_type": "inclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "LMS: Any grade LMS can be included Minimum size of LMS tumor should be 5 cm",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "inc:b3",
+      "criterion_type": "inclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "LPS: Diagnosis should be confirmed based on MDM2 (Mouse double minute 2 homolog) and CDK4 (Cyclin-dependent kinase 4) expression on IHC (immunohistochemistry), while proof of MDM2 amplification is highly recommended. All grade 3 DDLPS can be included. DDLPS with confirmed grade 2 on biopsy can be included when: The grade 2 DDLPS has an FNCLCC score=5 (Fédération Nationale des Centres de Lutte Contre Le Cancer), and clear necrosis on imaging (whether or not present on the biopsy). The tumors carry a high risk gene profile as determined by the Complexity INdex in SARComas (CINSARC-high) Unifocal tumour Resectable tumour: resectability is based on pre-operative imaging (CT-abdomen, potentially also with MRI) and has to be defined by the local treating sarcoma team. A patient is not considered resectable when the expectation is that only an R2 resection is feasible. Criteria for non-resectability are: Involvement of the superior mesenteric artery, aorta, coeliac trunk and/or portal vein Involvement of bone Growth into the spinal canal Progression of retro-hepatic inferior vena cava leiomyosarcoma towards the right atrium Infiltration of multiple major organs like liver, pancreas and or major vessels Patient must have radiologically measurable disease (RECIST 1.1), as confirmed by imaging. CT thorax abdomen pelvis with IV contrast is the preferred imaging modality. In case of any contra-indications (medical or regulatory), it is allowed to perform a non-contrast CT thorax + MRI abdomen \\& pelvis Collection of tumour tissue for central pathology review is mandatory. For patients with LMS: if there is not enough tissue for assessing the grading, this is acceptable. If tumour tissue is not available for the central pathology review, patient will not be eligible. If the biopsy was not done or the FFPE of the biopsy not available but at least 10 unstained slides or one pathological block are available for the central review, that will be considered as acceptable. For the biopsy if fine needle aspiration (FNA) is performed instead of core needle biopsy (CNB) recommended by the standard guidelines, please contact the EORTC medical monitors for further evaluation. Collection of tumour tissue and blood samples for translational research is mandatory. In case there is not enough tissue for TR, a new biopsy is not required and if the patient fulfils all other eligibility criteria, he/she will be eligible. If the blood samples are not collected, patient will not be eligible. If the patient refuses the collection of biomaterial for TR, patient will not be eligible even if he/she fulfils all other eligibility criteria ≥ 18 years old (no upper age limit) WHO performance status ≤ 2 Adequate haematological and organ function American Society of Anaesthesiologist (ASA) score \\< 3 Women of childbearing potential (WOCBP) must have a negative serum pregnancy test within 3 days prior to randomization. Note: a woman is considered of childbearing potential, i.e., fertile, if she is following menarche. She remains of childbearing potential until she becomes post-menopausal or permanently sterile.Permanent sterilisation methods include hysterectomy, bilateral salpingectomy and bilateral oophorectomy. A postmenopausal state is defined as no menses for 12 months without an alternative medical cause. A high follicle stimulating hormone (FSH) level in the postmenopausal range may be used to confirm a post-menopausal state in women not using hormonal contraception or hormonal replacement therapy. However, in the absence of 12 consecutive months without menses, a single FSH measurement is insufficient.",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "inc:b4",
+      "criterion_type": "inclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "WOCBP in both arms should use highly effective birth control measures, during the study treatment period and for at least 6 months after the last dose of chemotherapy or date of surgery (except for women receiving chemotherapy with ifosfamide who should continue contraception until 1 year after last day of treatment). A highly effective method of birth control is defined as a method which results in a low failure rate (i.e., less than 1% per year) when used consistently and correctly.",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "inc:b5",
+      "criterion_type": "inclusion",
+      "hardness": "procedural_pre_screen",
+      "arm_scope": null,
+      "source_text": "For men in the experimental arm: agreement to remain abstinent (refrain from heterosexual intercourse) or use contraceptive measures, and agreement to refrain from donating sperm.",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "inc:b6",
+      "criterion_type": "inclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Female subjects who are breast feeding should discontinue nursing prior to the first day of study treatment and until 6months after the last study treatment.",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "inc:b7",
+      "criterion_type": "inclusion",
+      "hardness": "procedural_pre_screen",
+      "arm_scope": null,
+      "source_text": "Before patient randomization, written informed consent must be given according to ICH/GCP, and national/local regulations.",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "exc:b0",
+      "criterion_type": "exclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Sarcoma originating from bone structure, abdominal or gynecological viscera",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "exc:b1",
+      "criterion_type": "exclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Extension through the sciatic notch or across the diaphragm",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "exc:metastatic",
+      "criterion_type": "exclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Metastatic disease",
+      "atoms": [
+        {
+          "atom_id": "a",
+          "predicate_type": "simple_comparison",
+          "arm_scope": null,
+          "source_text": "Metastatic disease",
+          "fact_key": "disease.metastatic",
+          "comparator": "eq",
+          "threshold": true
+        }
+      ],
+      "completeness_note": "complete"
+    },
+    {
+      "criterion_id": "exc:b3",
+      "criterion_type": "exclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Any previous surgery (excluding diagnostic biopsy), radiotherapy or systemic therapy for the present tumour",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "exc:b4",
+      "criterion_type": "exclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Hypersensitivity to doxorubicin, ifosfamide, dacarbazine or to any of their metabolites or to any of their excipients",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "exc:b5",
+      "criterion_type": "exclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Congestive heart failure",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "exc:b6",
+      "criterion_type": "exclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Angina pectoris",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "exc:b7",
+      "criterion_type": "exclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Myocardial infarction within 1 year before randomization",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "exc:b8",
+      "criterion_type": "exclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Uncontrolled arterial hypertension defined as blood pressure ≥ 150/100 mm Hg despite optimal medical therapy. Note: in case of high blood pressure: 1) initiation or adjustment of antihypertensive medication(s) is permitted prior to study entry; 2) blood pressure must be re-assessed on two occasions that are separated by a minimum of 1 hour. The mean SBP / DBP values from each blood pressure assessment must be ≤ 150/90mmHg in order for a patient to be eligible for the study.",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "exc:b9",
+      "criterion_type": "exclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Uncontrolled cardiac arrhythmia",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "exc:b10",
+      "criterion_type": "exclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Previous treatment with maximum cumulative doses (450mg/m² Doxorubicin or equivalent 900mg/m² Epirubicin) of doxorubicin, daunorubicin, epirubicin, idarubicin, and/or other anthracyclines and anthracenediones",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "exc:b11",
+      "criterion_type": "exclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Active and uncontrolled infections",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "exc:b12",
+      "criterion_type": "exclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Vaccination with live vaccines within 30 days prior to study entry",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "exc:b13",
+      "criterion_type": "exclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Inflammation of the urinary bladder (interstitial cystitis) and/or obstructions of the urine flow.",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "exc:b14",
+      "criterion_type": "exclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Other invasive malignancy within 5 years, with the exception of adequately treated non-melanoma skin cancer, localized cervical cancer, localized and Gleason ≤ 6prostate cancer.",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "exc:b15",
+      "criterion_type": "exclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Uncontrolled severe illness, infection, medical condition (including uncontrolled diabetes), other than the primary LPS or LMS of the retroperitoneum.",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "exc:pregnant",
+      "criterion_type": "exclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "pregnant",
+      "atoms": [
+        {
+          "atom_id": "a",
+          "predicate_type": "simple_comparison",
+          "arm_scope": null,
+          "source_text": "pregnant",
+          "fact_key": "safety.pregnant",
+          "comparator": "eq",
+          "threshold": true
+        }
+      ],
+      "completeness_note": "complete"
+    },
+    {
+      "criterion_id": "exc:b17",
+      "criterion_type": "exclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Any psychological, familial, sociological or geographical condition potentially hampering compliance with the study protocol and follow-up schedule; those conditions should be discussed with the patient before randomization in the trial",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "exc:b18",
+      "criterion_type": "exclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Known contraindication to imaging tracer and to MRI",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "exc:b19",
+      "criterion_type": "exclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Selection criteria for STREXIT 2",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "exc:b20",
+      "criterion_type": "exclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Patients with histologically proven primary resectable localized high-risk DDLPS or LMS of retroperitoneal space or infra-peritoneal spaces of pelvis (as described in the inclusion criteria of STRASS 2) and amenable to receive chemotherapy but for whom the list of eligibility criteria for the study is too restrictive (tumour grading not available, inadequate organ function, concomitant diseases)",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "exc:b21",
+      "criterion_type": "exclusion",
+      "hardness": "procedural_pre_screen",
+      "arm_scope": null,
+      "source_text": "Patients who meet all eligibility criteria of STRASS 2 but do not consent to randomization or are not enrolled for any other reason.",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "exc:b22",
+      "criterion_type": "exclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Patients enrolled in a Registry collecting data on primary RPS patients in the centres participating in STRASS 2 (e.g., RESAR) and who satisfy the above criteria.",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "exc:b23",
+      "criterion_type": "exclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Selection criteria for preferences for neoadjuvant chemotherapy in STRASS 2 substudy All patients recruited to STRASS 2 in participating centres (Australia +/- international sites) that are able to read, comprehend and write in English at a sufficient level to complete study materials.",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    }
+  ]
+}

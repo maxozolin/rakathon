@@ -1,0 +1,595 @@
+{
+  "schema_version": "avicenna.patient-packet/1.1.0",
+  "packet_id": "synthetic-example-001",
+  "patient_ref": "fict-example-001",
+  "generated_at": "2026-04-01T12:00:00Z",
+  "environment": "synthetic_demo",
+  "source_snapshot": {
+    "snapshot_id": "synthetic-demo-v1",
+    "ingestion_state": "complete",
+    "extractor_version": "demo/1",
+    "terminology_version": "demo/1"
+  },
+  "evaluation_context": {
+    "mode": "shifted_demo",
+    "anchor": {
+      "kind": "point",
+      "value": "2026-04-01",
+      "precision": "day",
+      "time_basis": "shifted_patient_local"
+    },
+    "absolute_screening_recency_allowed": false,
+    "policy_version": "demo-policy-1"
+  },
+  "facts": [
+    {
+      "fact_id": "age",
+      "fact_key": "demographics.age",
+      "state": "known",
+      "value": {
+        "kind": "integer",
+        "value": 66,
+        "unit": "years"
+      },
+      "missing_reason": null,
+      "assertion": "positive",
+      "subject_scope": "patient",
+      "effective_time": {
+        "kind": "point",
+        "value": "2026-03-25",
+        "precision": "day",
+        "time_basis": "shifted_patient_local"
+      },
+      "recorded_time": null,
+      "evidence": [
+        {
+          "resource_type": "Synthetic",
+          "resource_id": "syn-age",
+          "version_id": "1",
+          "locator": "value",
+          "source_kind": "structured",
+          "verification_status": "source_assertion"
+        }
+      ],
+      "provenance": {
+        "method": "source_projection",
+        "method_version": "demo/1",
+        "model_id": null,
+        "confidence": null,
+        "input_fact_refs": []
+      },
+      "review_status": "unreviewed",
+      "generalization": {
+        "applied": false,
+        "constraints": []
+      },
+      "alternatives": [],
+      "scope": null
+    },
+    {
+      "fact_id": "sex",
+      "fact_key": "demographics.administrative_gender",
+      "state": "known",
+      "value": {
+        "kind": "coded",
+        "system": "http://hl7.org/fhir/administrative-gender",
+        "code": "male",
+        "display": "male"
+      },
+      "missing_reason": null,
+      "assertion": "positive",
+      "subject_scope": "patient",
+      "effective_time": {
+        "kind": "point",
+        "value": "2026-03-25",
+        "precision": "day",
+        "time_basis": "shifted_patient_local"
+      },
+      "recorded_time": null,
+      "evidence": [
+        {
+          "resource_type": "Synthetic",
+          "resource_id": "syn-sex",
+          "version_id": "1",
+          "locator": "value",
+          "source_kind": "structured",
+          "verification_status": "source_assertion"
+        }
+      ],
+      "provenance": {
+        "method": "source_projection",
+        "method_version": "demo/1",
+        "model_id": null,
+        "confidence": null,
+        "input_fact_refs": []
+      },
+      "review_status": "unreviewed",
+      "generalization": {
+        "applied": false,
+        "constraints": []
+      },
+      "alternatives": [],
+      "scope": null
+    },
+    {
+      "fact_id": "dx",
+      "fact_key": "disease.primary",
+      "state": "known",
+      "value": {
+        "kind": "coded",
+        "system": "ICD-10",
+        "code": "C18.7",
+        "display": "C18.7"
+      },
+      "missing_reason": null,
+      "assertion": "positive",
+      "subject_scope": "patient",
+      "effective_time": {
+        "kind": "point",
+        "value": "2026-03-25",
+        "precision": "day",
+        "time_basis": "shifted_patient_local"
+      },
+      "recorded_time": null,
+      "evidence": [
+        {
+          "resource_type": "Synthetic",
+          "resource_id": "syn-dx",
+          "version_id": "1",
+          "locator": "value",
+          "source_kind": "structured",
+          "verification_status": "source_assertion"
+        }
+      ],
+      "provenance": {
+        "method": "source_projection",
+        "method_version": "demo/1",
+        "model_id": null,
+        "confidence": null,
+        "input_fact_refs": []
+      },
+      "review_status": "unreviewed",
+      "generalization": {
+        "applied": false,
+        "constraints": []
+      },
+      "alternatives": [],
+      "scope": null
+    },
+    {
+      "fact_id": "hist",
+      "fact_key": "disease.histology",
+      "state": "known",
+      "value": {
+        "kind": "coded",
+        "system": "ICD-O-3",
+        "code": "8140/3",
+        "display": "8140/3"
+      },
+      "missing_reason": null,
+      "assertion": "positive",
+      "subject_scope": "patient",
+      "effective_time": {
+        "kind": "point",
+        "value": "2026-03-25",
+        "precision": "day",
+        "time_basis": "shifted_patient_local"
+      },
+      "recorded_time": null,
+      "evidence": [
+        {
+          "resource_type": "Synthetic",
+          "resource_id": "syn-hist",
+          "version_id": "1",
+          "locator": "value",
+          "source_kind": "structured",
+          "verification_status": "source_assertion"
+        }
+      ],
+      "provenance": {
+        "method": "source_projection",
+        "method_version": "demo/1",
+        "model_id": null,
+        "confidence": null,
+        "input_fact_refs": []
+      },
+      "review_status": "unreviewed",
+      "generalization": {
+        "applied": false,
+        "constraints": []
+      },
+      "alternatives": [],
+      "scope": null
+    },
+    {
+      "fact_id": "met",
+      "fact_key": "disease.metastatic",
+      "state": "known",
+      "value": {
+        "kind": "boolean",
+        "value": true
+      },
+      "missing_reason": null,
+      "assertion": "positive",
+      "subject_scope": "patient",
+      "effective_time": {
+        "kind": "point",
+        "value": "2026-03-25",
+        "precision": "day",
+        "time_basis": "shifted_patient_local"
+      },
+      "recorded_time": null,
+      "evidence": [
+        {
+          "resource_type": "Synthetic",
+          "resource_id": "syn-met",
+          "version_id": "1",
+          "locator": "value",
+          "source_kind": "structured",
+          "verification_status": "source_assertion"
+        }
+      ],
+      "provenance": {
+        "method": "source_projection",
+        "method_version": "demo/1",
+        "model_id": null,
+        "confidence": null,
+        "input_fact_refs": []
+      },
+      "review_status": "unreviewed",
+      "generalization": {
+        "applied": false,
+        "constraints": []
+      },
+      "alternatives": [],
+      "scope": null
+    },
+    {
+      "fact_id": "rec",
+      "fact_key": "disease.recist_measurable",
+      "state": "known",
+      "value": {
+        "kind": "boolean",
+        "value": true
+      },
+      "missing_reason": null,
+      "assertion": "positive",
+      "subject_scope": "patient",
+      "effective_time": {
+        "kind": "point",
+        "value": "2026-03-25",
+        "precision": "day",
+        "time_basis": "shifted_patient_local"
+      },
+      "recorded_time": null,
+      "evidence": [
+        {
+          "resource_type": "Synthetic",
+          "resource_id": "syn-rec",
+          "version_id": "1",
+          "locator": "value",
+          "source_kind": "structured",
+          "verification_status": "source_assertion"
+        }
+      ],
+      "provenance": {
+        "method": "source_projection",
+        "method_version": "demo/1",
+        "model_id": null,
+        "confidence": null,
+        "input_fact_refs": []
+      },
+      "review_status": "unreviewed",
+      "generalization": {
+        "applied": false,
+        "constraints": []
+      },
+      "alternatives": [],
+      "scope": null
+    },
+    {
+      "fact_id": "ps",
+      "fact_key": "performance.status",
+      "state": "known",
+      "value": {
+        "kind": "scored_instrument",
+        "instrument": {
+          "system": "http://loinc.org",
+          "code": "89247-1"
+        },
+        "registry_version": "avicenna-instruments/1.0.0",
+        "representation": "numeric",
+        "no_interconversion": true,
+        "value": 1,
+        "value_high": null,
+        "scale_min": 0,
+        "scale_max": 4,
+        "step": 1
+      },
+      "missing_reason": null,
+      "assertion": "positive",
+      "subject_scope": "patient",
+      "effective_time": {
+        "kind": "point",
+        "value": "2026-03-25",
+        "precision": "day",
+        "time_basis": "shifted_patient_local"
+      },
+      "recorded_time": null,
+      "evidence": [
+        {
+          "resource_type": "Synthetic",
+          "resource_id": "syn-ps",
+          "version_id": "1",
+          "locator": "value",
+          "source_kind": "structured",
+          "verification_status": "source_assertion"
+        }
+      ],
+      "provenance": {
+        "method": "source_projection",
+        "method_version": "demo/1",
+        "model_id": null,
+        "confidence": null,
+        "input_fact_refs": []
+      },
+      "review_status": "unreviewed",
+      "generalization": {
+        "applied": false,
+        "constraints": []
+      },
+      "alternatives": [],
+      "scope": null
+    },
+    {
+      "fact_id": "kras",
+      "fact_key": "biomarker.result",
+      "state": "known",
+      "value": {
+        "kind": "biomarker",
+        "marker": {
+          "system": "avicenna-marker/1",
+          "code": "KRAS_G12C"
+        },
+        "result": {
+          "system": "avicenna-result/1",
+          "code": "detected"
+        },
+        "assay": "demo-assay",
+        "specimen_ref": null,
+        "disease_fact_ref": null
+      },
+      "missing_reason": null,
+      "assertion": "positive",
+      "subject_scope": "patient",
+      "effective_time": {
+        "kind": "point",
+        "value": "2026-03-25",
+        "precision": "day",
+        "time_basis": "shifted_patient_local"
+      },
+      "recorded_time": null,
+      "evidence": [
+        {
+          "resource_type": "Synthetic",
+          "resource_id": "syn-kras",
+          "version_id": "1",
+          "locator": "value",
+          "source_kind": "lab",
+          "verification_status": "source_assertion"
+        }
+      ],
+      "provenance": {
+        "method": "source_projection",
+        "method_version": "demo/1",
+        "model_id": null,
+        "confidence": null,
+        "input_fact_refs": []
+      },
+      "review_status": "unreviewed",
+      "generalization": {
+        "applied": false,
+        "constraints": []
+      },
+      "alternatives": [],
+      "scope": null
+    },
+    {
+      "fact_id": "nolm",
+      "fact_key": "disease.condition",
+      "state": "known",
+      "value": {
+        "kind": "coded",
+        "system": "avicenna-condition/1",
+        "code": "leptomeningeal_disease"
+      },
+      "missing_reason": null,
+      "assertion": "explicit_negative",
+      "subject_scope": "patient",
+      "effective_time": {
+        "kind": "point",
+        "value": "2026-03-25",
+        "precision": "day",
+        "time_basis": "shifted_patient_local"
+      },
+      "recorded_time": null,
+      "evidence": [
+        {
+          "resource_type": "Synthetic",
+          "resource_id": "syn-nolm",
+          "version_id": "1",
+          "locator": "value",
+          "source_kind": "structured",
+          "verification_status": "source_assertion"
+        }
+      ],
+      "provenance": {
+        "method": "source_projection",
+        "method_version": "demo/1",
+        "model_id": null,
+        "confidence": null,
+        "input_fact_refs": []
+      },
+      "review_status": "reviewed",
+      "generalization": {
+        "applied": false,
+        "constraints": []
+      },
+      "alternatives": [],
+      "scope": null
+    },
+    {
+      "fact_id": "t1",
+      "fact_key": "therapy.event",
+      "state": "known",
+      "value": {
+        "kind": "therapy_event",
+        "agents": [
+          {
+            "system": "inn",
+            "code": "oxaliplatin",
+            "display": "oxaliplatin"
+          },
+          {
+            "system": "inn",
+            "code": "fluorouracil",
+            "display": "fluorouracil"
+          }
+        ],
+        "classes": [
+          "chemotherapy"
+        ],
+        "evidence_kind": "administration",
+        "line": null,
+        "line_context": null,
+        "intent": "adjuvant",
+        "start": null,
+        "end": null,
+        "progression_time": null,
+        "best_response": null,
+        "disease_fact_ref": null
+      },
+      "missing_reason": null,
+      "assertion": "positive",
+      "subject_scope": "patient",
+      "effective_time": {
+        "kind": "point",
+        "value": "2024-02-01",
+        "precision": "day",
+        "time_basis": "shifted_patient_local"
+      },
+      "recorded_time": null,
+      "evidence": [
+        {
+          "resource_type": "Synthetic",
+          "resource_id": "syn-t1",
+          "version_id": "1",
+          "locator": "value",
+          "source_kind": "administration",
+          "verification_status": "source_assertion"
+        }
+      ],
+      "provenance": {
+        "method": "source_projection",
+        "method_version": "demo/1",
+        "model_id": null,
+        "confidence": null,
+        "input_fact_refs": []
+      },
+      "review_status": "unreviewed",
+      "generalization": {
+        "applied": false,
+        "constraints": []
+      },
+      "alternatives": [],
+      "scope": null
+    },
+    {
+      "fact_id": "nog12",
+      "fact_key": "therapy.event",
+      "state": "known",
+      "value": {
+        "kind": "scoped_absence",
+        "absent": true
+      },
+      "missing_reason": null,
+      "assertion": "explicit_negative",
+      "subject_scope": "patient",
+      "effective_time": {
+        "kind": "point",
+        "value": "2026-03-25",
+        "precision": "day",
+        "time_basis": "shifted_patient_local"
+      },
+      "recorded_time": null,
+      "evidence": [
+        {
+          "resource_type": "Synthetic",
+          "resource_id": "syn-nog12",
+          "version_id": "1",
+          "locator": "value",
+          "source_kind": "manual_review",
+          "verification_status": "reviewed"
+        }
+      ],
+      "provenance": {
+        "method": "source_projection",
+        "method_version": "demo/1",
+        "model_id": null,
+        "confidence": null,
+        "input_fact_refs": []
+      },
+      "review_status": "reviewed",
+      "generalization": {
+        "applied": false,
+        "constraints": []
+      },
+      "alternatives": [],
+      "scope": {
+        "concepts": {
+          "system": "avicenna-therapy/1",
+          "registry_version": "avicenna-seed/1.0.0",
+          "classes": [],
+          "agents": [
+            "sotorasib",
+            "adagrasib"
+          ]
+        },
+        "disease_setting": "all_settings",
+        "disease_fact_ref": null,
+        "disease_scope": "all_diseases",
+        "time": {
+          "extent": "lifetime",
+          "time_basis": "shifted_patient_local",
+          "through": {
+            "kind": "point",
+            "value": "2026-04-01",
+            "precision": "day",
+            "time_basis": "shifted_patient_local"
+          }
+        }
+      }
+    }
+  ],
+  "coverage": {
+    "assessed_fact_keys": [
+      "biomarker.result",
+      "demographics.administrative_gender",
+      "demographics.age",
+      "disease.condition",
+      "disease.histology",
+      "disease.metastatic",
+      "disease.primary",
+      "disease.recist_measurable",
+      "performance.status",
+      "therapy.event"
+    ],
+    "unassessed_fact_keys": [
+      "disease.stage",
+      "lab.result",
+      "logistics.treating_center"
+    ],
+    "completeness": []
+  },
+  "warnings": []
+}

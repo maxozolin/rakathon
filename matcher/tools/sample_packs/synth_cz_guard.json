@@ -1,0 +1,101 @@
+{
+  "schema_version": "avicenna.criteria-pack/0.1",
+  "pack_id": "pack-SYNTHETIC-cz",
+  "trial_id": "SYNTH-P7-CZ",
+  "criteria_completeness": "complete",
+  "generated_at": "2026-01-01T00:00:00Z",
+  "arms": [
+    {
+      "arm_id": "main",
+      "arm_name": "Main",
+      "study_type": "interventional"
+    }
+  ],
+  "criteria": [
+    {
+      "criterion_id": "inc:age-cz",
+      "criterion_type": "inclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Age \u2265 50 years (\u2265 55 years for sites in the Czech Republic)",
+      "atoms": [
+        {
+          "atom_id": "g",
+          "predicate_type": "guarded_case",
+          "arm_scope": null,
+          "source_text": "age \u2265 50, or \u2265 55 for Czech Republic",
+          "guard_fact_key": "country",
+          "guard_scope": "site_context",
+          "cases": [
+            {
+              "value": "CZ",
+              "predicate": {
+                "atom_id": "cz",
+                "predicate_type": "simple_comparison",
+                "arm_scope": null,
+                "source_text": "\u2265 55 (CZ)",
+                "fact_key": "demographics.age",
+                "comparator": "ge",
+                "threshold": {
+                  "value": 55,
+                  "unit": "a"
+                }
+              }
+            }
+          ],
+          "else": {
+            "atom_id": "other",
+            "predicate_type": "simple_comparison",
+            "arm_scope": null,
+            "source_text": "\u2265 50",
+            "fact_key": "demographics.age",
+            "comparator": "ge",
+            "threshold": {
+              "value": 50,
+              "unit": "a"
+            }
+          }
+        }
+      ],
+      "completeness_note": "complete"
+    },
+    {
+      "criterion_id": "exc:mi",
+      "criterion_type": "exclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Myocardial infarction within 6 months before screening",
+      "atoms": [
+        {
+          "atom_id": "m",
+          "predicate_type": "simple_comparison",
+          "arm_scope": null,
+          "source_text": "MI within 6 months",
+          "fact_key": "dx.myocardial_infarction",
+          "comparator": "eq",
+          "threshold": true,
+          "relation": "within_days_before_anchor",
+          "window_days": 183,
+          "quantifier": "exists"
+        }
+      ],
+      "completeness_note": "complete"
+    },
+    {
+      "criterion_id": "inc:consent",
+      "criterion_type": "inclusion",
+      "hardness": "procedural_pre_screen",
+      "arm_scope": null,
+      "source_text": "Signed informed consent",
+      "atoms": [
+        {
+          "atom_id": "c",
+          "predicate_type": "procedural",
+          "arm_scope": null,
+          "source_text": "Signed informed consent"
+        }
+      ],
+      "completeness_note": "complete"
+    }
+  ]
+}

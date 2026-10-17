@@ -1,0 +1,3 @@
+[console_scripts]
+avicenna-matcher = avicenna_matcher.cli:main
+avicenna-mcp = avicenna_mcp.server:main

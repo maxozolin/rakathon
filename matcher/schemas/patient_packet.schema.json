@@ -1,0 +1,732 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Avicenna Patient Packet",
+  "description": "Matcher-internal patient evidence (avicenna.matcher-packet/1.0.0). The canonical hospital contract avicenna.patient-packet/1.1.0 is adapted into this shape by avicenna_matcher.adapter.",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "packet_id",
+    "patient_ref",
+    "generated_at",
+    "environment",
+    "source_snapshot",
+    "evaluation_context",
+    "facts",
+    "coverage",
+    "warnings"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "avicenna.matcher-packet/1.0.0",
+      "description": "Matcher-internal packet shape. Canonical avicenna.patient-packet/1.1.0 packets enter through avicenna_matcher.adapter (loss-aware), never by sharing this version string."
+    },
+    "packet_id": {
+      "type": "string",
+      "description": "Opaque local identifier for this immutable packet revision"
+    },
+    "patient_ref": {
+      "type": "string",
+      "description": "Opaque local pseudonymous reference, never a direct identifier"
+    },
+    "generated_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "RFC 3339 timestamp of actual packet-generation time, not shifted clinical time"
+    },
+    "environment": {
+      "type": "string",
+      "enum": [
+        "synthetic_demo",
+        "approved_event",
+        "hospital"
+      ],
+      "description": "The context in which this packet was generated"
+    },
+    "source_snapshot": {
+      "type": "object",
+      "required": [
+        "snapshot_id",
+        "ingestion_state",
+        "extractor_version",
+        "terminology_version"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "snapshot_id": {
+          "type": "string",
+          "description": "Local versioned snapshot identifier"
+        },
+        "ingestion_state": {
+          "type": "string",
+          "enum": [
+            "complete",
+            "partial",
+            "unknown"
+          ],
+          "description": "Complete, partial (must produce visible warning, must not turn absent records into negatives), or unknown"
+        },
+        "extractor_version": {
+          "type": "string",
+          "description": "Version of the extractor that produced this packet"
+        },
+        "terminology_version": {
+          "type": "string",
+          "description": "Version of the terminology used"
+        }
+      }
+    },
+    "evaluation_context": {
+      "type": "object",
+      "required": [
+        "mode",
+        "anchor",
+        "absolute_screening_recency_allowed",
+        "policy_version"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "mode": {
+          "type": "string",
+          "enum": [
+            "prescreen_real_time",
+            "shifted_demo",
+            "historical_review"
+          ],
+          "description": "The evaluation mode"
+        },
+        "anchor": {
+          "oneOf": [
+            {
+              "$ref": "#/definitions/TimePoint"
+            },
+            {
+              "type": "null",
+              "description": "Null when no valid anchor exists"
+            }
+          ]
+        },
+        "absolute_screening_recency_allowed": {
+          "type": "boolean",
+          "description": "Whether absolute screening recency facts are allowed"
+        },
+        "policy_version": {
+          "type": "string",
+          "description": "Versioned local evaluation policy"
+        }
+      }
+    },
+    "facts": {
+      "type": "array",
+      "description": "All clinical assertions; all fact_ids must be unique",
+      "items": {
+        "$ref": "#/definitions/Fact"
+      }
+    },
+    "coverage": {
+      "type": "object",
+      "required": [
+        "assessed_fact_keys",
+        "unassessed_fact_keys",
+        "completeness"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "assessed_fact_keys": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Fact keys that have been assessed"
+        },
+        "unassessed_fact_keys": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Fact keys that have not been assessed"
+        },
+        "completeness": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/CompletenessAssertion"
+          },
+          "description": "Scoped completeness assertions"
+        }
+      }
+    },
+    "warnings": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Controlled-code warnings, no patient narrative"
+    }
+  },
+  "definitions": {
+    "Fact": {
+      "type": "object",
+      "required": [
+        "fact_id",
+        "fact_key",
+        "state",
+        "value",
+        "missing_reason",
+        "assertion",
+        "subject_scope",
+        "effective_time",
+        "recorded_time",
+        "evidence",
+        "provenance",
+        "review_status",
+        "generalization",
+        "alternatives",
+        "scope"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "fact_id": {
+          "type": "string",
+          "description": "Unique identifier within packet"
+        },
+        "fact_key": {
+          "type": "string",
+          "description": "Vocabulary key for this fact type"
+        },
+        "state": {
+          "type": "string",
+          "enum": [
+            "known",
+            "unknown",
+            "not_tested",
+            "indeterminate",
+            "conflict"
+          ],
+          "description": "State of this fact"
+        },
+        "value": {
+          "description": "Typed value object; null for all states except 'known'",
+          "oneOf": [
+            {
+              "type": "null"
+            },
+            {
+              "$ref": "#/definitions/QuantityValue"
+            },
+            {
+              "$ref": "#/definitions/CodedValue"
+            },
+            {
+              "$ref": "#/definitions/BandValue"
+            },
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "string"
+            },
+            {
+              "$ref": "#/definitions/TherapyEventValue"
+            }
+          ]
+        },
+        "missing_reason": {
+          "oneOf": [
+            {
+              "type": "null"
+            },
+            {
+              "type": "string",
+              "enum": [
+                "not_documented",
+                "not_assessed",
+                "source_incomplete",
+                "generalized",
+                "unavailable",
+                "explicitly_not_tested",
+                "ambiguous",
+                "unsupported_code",
+                "unsupported_unit",
+                "insufficient_precision",
+                "insufficient_inputs",
+                "contradictory_evidence"
+              ]
+            }
+          ],
+          "description": "Reason code when value is absent"
+        },
+        "assertion": {
+          "oneOf": [
+            {
+              "type": "null"
+            },
+            {
+              "type": "string",
+              "enum": [
+                "positive",
+                "explicit_negative",
+                "suspected",
+                "historical",
+                "not_applicable"
+              ]
+            }
+          ],
+          "description": "Assertion type (must be null for unknown/not_tested/indeterminate/conflict states)"
+        },
+        "subject_scope": {
+          "type": "string",
+          "enum": [
+            "patient",
+            "family",
+            "other",
+            "uncertain"
+          ],
+          "description": "Scope of the subject"
+        },
+        "effective_time": {
+          "oneOf": [
+            {
+              "type": "null"
+            },
+            {
+              "$ref": "#/definitions/TimePoint"
+            },
+            {
+              "$ref": "#/definitions/TimeInterval"
+            }
+          ],
+          "description": "When the clinical assertion applies"
+        },
+        "recorded_time": {
+          "oneOf": [
+            {
+              "type": "null"
+            },
+            {
+              "$ref": "#/definitions/TimePoint"
+            }
+          ],
+          "description": "When evidence was documented"
+        },
+        "evidence": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Evidence"
+          },
+          "description": "Source evidence; must be empty only for 'unknown' state"
+        },
+        "provenance": {
+          "type": "object",
+          "required": [
+            "derivation_method",
+            "extractor_version"
+          ],
+          "additionalProperties": true,
+          "properties": {
+            "derivation_method": {
+              "type": "string",
+              "description": "How this fact was derived (e.g., 'direct_extract', 'derived')"
+            },
+            "extractor_version": {
+              "type": "string",
+              "description": "Version of the extractor that produced this fact"
+            }
+          },
+          "description": "Derivation/extraction method and version"
+        },
+        "review_status": {
+          "type": "string",
+          "enum": [
+            "unreviewed",
+            "reviewed",
+            "rejected"
+          ],
+          "description": "Review status of this fact"
+        },
+        "generalization": {
+          "type": "object",
+          "required": [
+            "applied",
+            "constraints"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "applied": {
+              "type": "boolean",
+              "description": "Whether generalization was applied"
+            },
+            "constraints": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Constraints on generalization"
+            }
+          },
+          "description": "Generalization metadata"
+        },
+        "alternatives": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "IDs of conflicting alternative facts; empty if none"
+        },
+        "scope": {
+          "oneOf": [
+            {
+              "type": "null"
+            },
+            {
+              "$ref": "#/definitions/Scope"
+            }
+          ],
+          "description": "Scope for scoped assertions (negative/history); null otherwise"
+        },
+        "concept": {
+          "$ref": "#/definitions/CodedValue",
+          "description": "Analyte / specific concept identity (e.g. LOINC) when fact_key is generic."
+        },
+        "qualifiers": {
+          "type": "object",
+          "description": "Recognized criterion-relevant qualifiers. Unrecognized keys are carried but never executed.",
+          "properties": {
+            "disease_fact_ref": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "specimen_ref": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "assay": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "qtc_method": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "reference_low": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "reference_high": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "reference_ucum_code": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "interpretation": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "confirmation_method": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "QuantityValue": {
+      "type": "object",
+      "required": [
+        "kind",
+        "value",
+        "unit",
+        "normalization_status"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "type": "string",
+          "const": "quantity"
+        },
+        "value": {
+          "type": "number",
+          "description": "Numeric value (finite)"
+        },
+        "unit": {
+          "type": "string",
+          "description": "Unit of measurement"
+        },
+        "normalization_status": {
+          "type": "string",
+          "enum": [
+            "validated",
+            "unmapped",
+            "unsupported"
+          ],
+          "description": "Normalization status (\u00a7A5): validated | unmapped | unsupported"
+        }
+      }
+    },
+    "CodedValue": {
+      "type": "object",
+      "required": [
+        "kind",
+        "system",
+        "code"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "type": "string",
+          "const": "coded"
+        },
+        "system": {
+          "type": "string",
+          "description": "Vocabulary system (e.g., SNOMED, ICD-10, ATC)"
+        },
+        "code": {
+          "type": "string",
+          "description": "Code within the system"
+        },
+        "display": {
+          "type": "string",
+          "description": "Optional display text"
+        }
+      }
+    },
+    "BandValue": {
+      "type": "object",
+      "required": [
+        "kind"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "type": "string",
+          "const": "band"
+        },
+        "lower_inclusive": {
+          "oneOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "upper_inclusive": {
+          "oneOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "unit": {
+          "type": "string",
+          "description": "UCUM unit of the band bounds; absent = unitless (never commensurable with a unit-bearing threshold)"
+        }
+      }
+    },
+    "TimePoint": {
+      "type": "object",
+      "required": [
+        "timestamp"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "timestamp": {
+          "type": "string",
+          "format": "date-time",
+          "description": "RFC 3339 timestamp"
+        },
+        "precision": {
+          "type": "string",
+          "enum": [
+            "year",
+            "month",
+            "day",
+            "second"
+          ],
+          "description": "Precision of the timestamp; a reduced-precision time denotes its whole unit. Absent = second."
+        },
+        "time_basis": {
+          "type": "string",
+          "enum": [
+            "shifted_patient_local",
+            "unshifted_verified",
+            "unknown"
+          ],
+          "description": "Chronology the timestamp lives on. Different or unknown bases are never compared. Absent = one consistent basis guaranteed by the producer."
+        }
+      }
+    },
+    "TimeInterval": {
+      "type": "object",
+      "required": [
+        "start",
+        "end"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "start": {
+          "oneOf": [
+            {
+              "type": "null"
+            },
+            {
+              "$ref": "#/definitions/TimePoint"
+            }
+          ]
+        },
+        "end": {
+          "oneOf": [
+            {
+              "type": "null"
+            },
+            {
+              "$ref": "#/definitions/TimePoint"
+            }
+          ]
+        }
+      }
+    },
+    "Evidence": {
+      "type": "object",
+      "required": [
+        "source_text"
+      ],
+      "additionalProperties": true,
+      "properties": {
+        "source_text": {
+          "type": "string",
+          "description": "Verbatim or paraphrased source text"
+        }
+      }
+    },
+    "CompletenessAssertion": {
+      "type": "object",
+      "required": [
+        "assertion_id",
+        "fact_key",
+        "scope",
+        "authorized_under"
+      ],
+      "additionalProperties": false,
+      "description": "Scoped reviewed-reconciliation completeness, already checked against a pinned local authorization policy. Used only when evaluation context supplies the same authorization policy version.",
+      "properties": {
+        "assertion_id": {
+          "type": "string"
+        },
+        "fact_key": {
+          "type": "string"
+        },
+        "scope": {
+          "$ref": "#/definitions/Scope"
+        },
+        "authorized_under": {
+          "type": "string",
+          "description": "authorization_policy.policy_version that accepted it"
+        }
+      }
+    },
+    "Scope": {
+      "type": "object",
+      "required": [
+        "scope_type"
+      ],
+      "additionalProperties": true,
+      "properties": {
+        "scope_type": {
+          "type": "string",
+          "description": "Type of scope (e.g., 'time_window', 'setting', 'explicit_concept_set')"
+        }
+      }
+    },
+    "TherapyEventValue": {
+      "type": "object",
+      "required": [
+        "kind",
+        "agents",
+        "classes",
+        "intent",
+        "evidence_kind"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "const": "therapy_event"
+        },
+        "agents": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "system",
+              "code"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "system": {
+                "type": "string"
+              },
+              "code": {
+                "type": "string"
+              },
+              "display": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "classes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "intent": {
+          "type": "string",
+          "enum": [
+            "neoadjuvant",
+            "adjuvant",
+            "advanced",
+            "palliative",
+            "other",
+            "unknown"
+          ]
+        },
+        "evidence_kind": {
+          "type": "string",
+          "enum": [
+            "prescription",
+            "billing",
+            "administration",
+            "narrative",
+            "review"
+          ],
+          "description": "Only administration/review confirm the exposure occurred (prescription/billing/narrative do not)."
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,470 @@
+{
+  "schema_version": "avicenna.criteria-pack/0.1",
+  "pack_id": "NCT04221035@2025-06-26/trial-pack-builder-llm/1.0.0",
+  "trial_id": "NCT04221035",
+  "criteria_completeness": "partial",
+  "generated_at": "2026-10-17T00:00:00Z",
+  "arms": [
+    {
+      "arm_id": "main",
+      "arm_name": "All participants",
+      "study_type": "interventional"
+    }
+  ],
+  "criteria": [
+    {
+      "criterion_id": "inc:age-max",
+      "criterion_type": "inclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Maximum age: 21.0 Years (registry structured field)",
+      "atoms": [
+        {
+          "atom_id": "a",
+          "predicate_type": "simple_comparison",
+          "arm_scope": null,
+          "source_text": "Age ≤ 21.0 years",
+          "fact_key": "demographics.age",
+          "comparator": "le",
+          "threshold": {
+            "value": 21.0,
+            "unit": "a"
+          }
+        }
+      ],
+      "completeness_note": "complete"
+    },
+    {
+      "criterion_id": "inc:b0",
+      "criterion_type": "inclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Enrollment in HR-NBL2 will be performed:",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "inc:b1",
+      "criterion_type": "inclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "at diagnosis before the beginning of chemotherapy or",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "inc:b2",
+      "criterion_type": "inclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "up to 21 days after one course of Carboplatin-Etoposide for patients with localized neuroblastoma or infants with metastatic neuroblastoma with MYCN amplification or patients with metastatic neuroblastoma treated in emergency or",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "inc:b3",
+      "criterion_type": "inclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "up to 21 days after one course of the current protocol for R-I randomisation (RAPID COJEC/GPOH) low/intermediate risk neuroblastoma in Germany/Netherlands for patients with localized neuroblastoma or infants with metastatic neuroblastoma with MYCN amplification HR-NBL2 eligibility criteria:",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "inc:b4",
+      "criterion_type": "inclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Established diagnosis of neuroblastoma according to the SIOPEN- modified International Neuroblastoma Risk Group (INRG) criteria, High-risk neuroblastoma defined as: Stage M neuroblastoma above 365 days of age at diagnosis (no upper age limit) and Ms neuroblastoma 12-18 months old, any MYCN status or L2, M or Ms neuroblastoma any age with MYCN amplification, or focal high level MYC or MYCL amplification. In Germany, patients aged less than 18 months with stage M and without MYCN amplification will not be enrolled in HR-NBL2 trial.",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "inc:b5",
+      "criterion_type": "inclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "No previous chemotherapy or up to 21 days after one cycle of Carboplatin-Etoposide chemotherapy for patients with localized neuroblastoma or infants with metastatic neuroblastoma with MYCN amplification or patients with metastatic neuroblastoma treated in emergency or up to 21 days after one course of the current protocol for low/intermediate risk neuroblastoma in Germany/Netherlands for patients with localized neuroblastoma or infants with metastatic neuroblastoma with MYCN amplification",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "inc:b6",
+      "criterion_type": "inclusion",
+      "hardness": "procedural_pre_screen",
+      "arm_scope": null,
+      "source_text": "Females of childbearing potential must have a negative serum or urine pregnancy test within 7 days prior to initiation of treatment. Sexually active patients must agree to use acceptable and appropriate contraception while on HR-NBL2 study and for one year after stopping the study. Acceptable contraception is defined in CTFG Guidelines \"Recommendations related to contraception and pregnancy testing in clinical trials\" (Appendix 11). Female patients who are lactating must agree to stop breast-feeding.",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "inc:b7",
+      "criterion_type": "inclusion",
+      "hardness": "procedural_pre_screen",
+      "arm_scope": null,
+      "source_text": "Written informed consent to enter the HR-NBL2 protocol from patient or parents/legal representative, patient, and age-appropriate assent.",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "inc:b8",
+      "criterion_type": "inclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Patient affiliated to a social security regimen or beneficiary of the same according to local requirements.",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "inc:b9",
+      "criterion_type": "inclusion",
+      "hardness": "procedural_pre_screen",
+      "arm_scope": null,
+      "source_text": "Patients should be able and willing to comply with study visits and procedures as per protocol R-I eligibility criteria: \\- Written informed consent to enter the R-I randomisation from patient or parents/legal representative, patient, and age- appropriate assent. In case of parents'/patient's refusal to R-I, or Organ toxicity exclusion criteria at diagnosis, patients can still be enrolled in HR- NBL2 trial with parents'/patient's consent before or within 3 weeks from the beginning of chemotherapy R-HDC randomisation (Single HDC Bu-Mel/ Tandem HDC Thiotepa+Bu-Mel) Etoposide or one course of the current protocol for low/intermediate risk neuroblastoma in Germany/Netherlands). Patients will be treated with the standard induction regimen per country (Rapid COJEC or GPOH) and will be potentially eligible for subsequent randomisations. Randomisation for HDC strategy will be performed at the end of induction after the disease evaluation and after surgery of the primary tumour for those patients who will receive surgery before HDC. R-HDC eligibility criteria:",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "inc:b10",
+      "criterion_type": "inclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "\\- Stage M neuroblastoma above 365 days of age at diagnosis, any MYCN status, EXCEPT patients with stage M or Ms 12-18 months old with numerical chromosomal alterations only, and in complete metastatic response at the end of induction: in this case, patients will have surgery and no further treatment. OR \\- L2, M or Ms neuroblastoma, any age, with MYCN amplification, or focal high level MYC or MYCL amplification",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "inc:b11",
+      "criterion_type": "inclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Age \\< 21 years at the time of randomization",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "inc:b12",
+      "criterion_type": "inclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Complete response (CR) or partial response (PR) at metastatic sites: Bone disease: mIBG uptake completely resolved or SIOPEN score ≤ 3 and at least 50% reduction in mIBG score (or ≤ 3 bone lesions and at least 50% reduction in number of FDG- PET-avid bone lesions for mIBG-nonavid tumours). Bone marrow disease: CR and/or minimal disease (MD) according to International Neuroblastoma Response Criteria Other metastatic sites: CR. (after induction chemotherapy +/- surgery), except for distant lymph nodes for which PR is accepted with a possible secondary surgery",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "inc:b13",
+      "criterion_type": "inclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Acceptable organ function and performance status: Performance status ≥ 50%. Hematological status: ANC\\>0.5x109/L, platelets \\> 20x 109/L Cardiac function: (\\< grade 2) Normal chest X-Ray and oxygen saturation. Absence of any toxicity ≥ grade 3. 4) Sufficient collected stem cells available; a total harvest of at least 6 x 106/kg CD34+ cells, to be stored in at least 4 separate bags to administer at least 3 x 106/kg CD34+ cells per rescue.",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "inc:b14",
+      "criterion_type": "inclusion",
+      "hardness": "procedural_pre_screen",
+      "arm_scope": null,
+      "source_text": "Written informed consent, including agreement of patient or parents/legal guardian for minors, to enter the R-HDC randomisation.",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "inc:b15",
+      "criterion_type": "inclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Patient affiliated to a social security regimen or beneficiary of the same according to local requirements.",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "inc:b16",
+      "criterion_type": "inclusion",
+      "hardness": "procedural_pre_screen",
+      "arm_scope": null,
+      "source_text": "Patients should be able and willing to comply with study visits and procedures as per protocol. In case of parents'/patient's refusal, or insufficient stem cells, collection for tandem HDC but with a minimum of 3 x 106 CD34+ cells/kg body weight, or in case of patients older than 21 years, or organ toxicity, HDC will consist on the standard HD Bu-Mel and patients will be eligible for the subsequent randomisation. R-RTx randomisation (Local Radiotherapy) Chemoimmunotherapy arm R-RTx eligibility criteria: An evaluation of the local disease will be performed after HDC/ASCR and surgery:",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "inc:b17",
+      "criterion_type": "inclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "In case of no local macroscopic disease, all patients will receive 21,6-Gy radiotherapy to the pre-operative tumour bed",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "inc:b18",
+      "criterion_type": "inclusion",
+      "hardness": "procedural_pre_screen",
+      "arm_scope": null,
+      "source_text": "In case of local macroscopic residual disease, patients will be eligible to R-RTx if the following criteria are met: No evidence of disease progression after HDC/ASCR. Interval between the last ASCR and radiotherapy start between 60 and 90 days. Performance status greater or equal 50%. Hematological status: ANC \\>0.5x109/L, platelets \\> 20x109/L. Written informed consent, including agreement of patient or parents/legal guardian for minors, to enter the R-RTx randomisation. Patient affiliated to a social security regimen or beneficiary of the same according to local requirements. Patients should be able and willing to comply with study visits and procedures as per protocol. In case of parents'/patient's refusal of the randomisation, the patient will receive 21.6 Gy radiotherapy to the pre-operative tumour bed. Chemoimmunotherapy arm eligibility criteria:",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "inc:b19",
+      "criterion_type": "inclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Insufficient metastatic response at the end of induction chemotherapy, defined as: SIOPEN score \\> 3 or less than 50% reduction in mIBG score (or \\> 3 bone lesions or less 50% reduction in number of FDG-PET-avid bone lesions for mIBG-non avid tumours) OR Bone marrow disease: SD according to International Neuroblastoma Response Criteria OR Other metastatic sites: PR or SD. For distant lymph nodes: PR and not resectable or SD.",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "inc:b20",
+      "criterion_type": "inclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Performance status ≥ 50%.",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "inc:b21",
+      "criterion_type": "inclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Hematological status: ANC\\>0.75x109/L without G-CSF for at least 48 hours (or ANC ≥ 0.50 x 109 /L in case of bone marrow involvement), platelets \\> 50x 109/L and rising, without platelets transfusion for 72 hours.",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "inc:b22",
+      "criterion_type": "inclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "AST or ALT ≤7.5 ULN and total bilirubin ≤1.5 ULN. In patients with liver metastases, total bilirubin ≤2.5 ULN is allowed.",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "inc:b23",
+      "criterion_type": "inclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "No active infection;",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "inc:b24",
+      "criterion_type": "inclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "No grade \\>2 gastrointestinal toxicity.",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "inc:b25",
+      "criterion_type": "inclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "No grade ≥ 3 toxicity related to previous treatment.",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "inc:b26",
+      "criterion_type": "inclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Oxygen saturation \\> 94% Non-inclusion criteria for HR-NBL2:",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "inc:b27",
+      "criterion_type": "inclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Any negative answer concerning the HR-NLB2 inclusion criteria",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "inc:b28",
+      "criterion_type": "inclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Patient under guardianship or deprived of his liberty by a judicial or administrative decision or incapable of giving his consent.",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "inc:b29",
+      "criterion_type": "inclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Participating in another clinical study with an IMP while on study treatment.",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "inc:b30",
+      "criterion_type": "inclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Chronic inflammatory bowel disease and/or bowel obstruction.",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "inc:b31",
+      "criterion_type": "inclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Pregnant or breastfeeding women.",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "inc:b32",
+      "criterion_type": "inclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Known hypersensitivity to the active substance or to any of the excipients of the study drugs",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "inc:b33",
+      "criterion_type": "inclusion",
+      "hardness": "procedural_pre_screen",
+      "arm_scope": null,
+      "source_text": "Concomitant self-medication medicine that in the investigator opinion could interact with study treatments, including herbal medicine (e.g. St John's Wort (Hypericum Perforatum). Non-inclusion criteria specific to the R-I randomisation (RAPID COJEC/GPOH):",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "inc:b34",
+      "criterion_type": "inclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Urinary tract obstruction ≥ grade 3",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "inc:b35",
+      "criterion_type": "inclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Heart failure or myocarditis ≥ grade 2, any arrhythmia or myocardial infection",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "inc:b36",
+      "criterion_type": "inclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Peripheral motor or sensory neuropathy ≥ grade 3",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "inc:b37",
+      "criterion_type": "inclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Demyelinating form of Charcot-Marie-Tooth syndrome",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "inc:b38",
+      "criterion_type": "inclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Hearing impairment ≥ grade 2",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "inc:b39",
+      "criterion_type": "inclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Concurrent prophylactic use of phenytoin",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "inc:b40",
+      "criterion_type": "inclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Cardiorespiratory disease that contraindicates hyperhydration Non-inclusion criteria common to all randomisations (R-I, R-HDC, and R-RTx):",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "inc:b41",
+      "criterion_type": "inclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Any negative answer concerning the inclusion criteria of R-I or R- HDC or R-RTx will render the patient ineligible for the corresponding therapy phase randomisation. However, these patients may remain on study and be considered to receive standard treatment of the respective therapy phase, and may be potentially eligible for subsequent randomisations.",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "inc:b42",
+      "criterion_type": "inclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Liver function: Alanine aminotransferase (ALT) \\> 3.0 x ULN and blood bilirubin \\> 1.5 x ULN (toxicity ≥ grade 2). In case of toxicity ≥ grade 2, call national principal investigator study coordinator to discuss the feasibility.",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "inc:b43",
+      "criterion_type": "inclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Renal function: Creatinine clearance and/or GFR \\< 60 ml/min/1.73m² (toxicity ≥ grade 2). If GFR \\< 60ml/min/1.73m², call national principal investigator study coordinator to discuss about the treatment.",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "inc:b44",
+      "criterion_type": "inclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Dyspnea at rest and/or pulse oximetry \\<95% in air (only for R-HDC, and R-RTx)",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "inc:b45",
+      "criterion_type": "inclusion",
+      "hardness": "procedural_pre_screen",
+      "arm_scope": null,
+      "source_text": "Any uncontrolled intercurrent illness or infection that in the investigator opinion would impair study participation.",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "inc:b46",
+      "criterion_type": "inclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Concomitant use with yellow fever vaccine and with live virus or bacterial vaccines.",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "inc:b47",
+      "criterion_type": "inclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Patient allergic to peanut or soya. Non-inclusion criteria to R-HDC: \\- Any negative answer concerning the R-HDC inclusion criteria Non-inclusion criteria to chemoimmunotherapy arm: \\- Any negative answer concerning the inclusion criteria of chemoimmunotherapy arm.",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    }
+  ]
+}

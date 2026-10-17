@@ -1,0 +1,413 @@
+{
+  "schema_version": "avicenna.criteria-pack/0.1",
+  "pack_id": "NCT03486873@2026-10-16/trial-pack-builder-llm/1.0.0",
+  "trial_id": "NCT03486873",
+  "criteria_completeness": "partial",
+  "generated_at": "2026-10-17T00:00:00Z",
+  "arms": [
+    {
+      "arm_id": "main",
+      "arm_name": "All participants",
+      "study_type": "interventional"
+    }
+  ],
+  "criteria": [
+    {
+      "criterion_id": "inc:age-min",
+      "criterion_type": "inclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Minimum age: 18.0 Years (registry structured field)",
+      "atoms": [
+        {
+          "atom_id": "a",
+          "predicate_type": "simple_comparison",
+          "arm_scope": null,
+          "source_text": "Age ≥ 18.0 years",
+          "fact_key": "demographics.age",
+          "comparator": "ge",
+          "threshold": {
+            "value": 18.0,
+            "unit": "a"
+          }
+        }
+      ],
+      "completeness_note": "complete"
+    },
+    {
+      "criterion_id": "inc:b0",
+      "criterion_type": "inclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Treated on the parent pembrolizumab studies established by the Sponsor as MK-3475-587 ready.",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "inc:b1",
+      "criterion_type": "inclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Currently receiving pembrolizumab, pembrolizumab based combinations or lenvatinib from parent studies or in a follow-up phase. Additional eligibility criteria for participants who enter Second Course Phase once they are enrolled on MK-3475-587:",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "inc:b2",
+      "criterion_type": "inclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Has not received any anticancer systemic treatment since the last dose of pembrolizumab or a pembrolizumab-based combination in First Course Phase.",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "inc:ecog",
+      "criterion_type": "inclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Has an Eastern Cooperative Oncology Group (ECOG) performance status of 0 or 1.",
+      "atoms": [
+        {
+          "atom_id": "a",
+          "predicate_type": "simple_comparison",
+          "arm_scope": null,
+          "source_text": "Has an Eastern Cooperative Oncology Group (ECOG) performance status of 0 or 1.",
+          "fact_key": "performance.status",
+          "comparator": "le",
+          "threshold": {
+            "value": 1,
+            "unit": "{ECOG}"
+          },
+          "relation": "at_screening"
+        }
+      ],
+      "completeness_note": "complete"
+    },
+    {
+      "criterion_id": "inc:b4",
+      "criterion_type": "inclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Demonstrates adequate organ function.",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "inc:b5",
+      "criterion_type": "inclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Have resolution of any toxic effect(s) of First Course Phase trial treatment with pembrolizumab or a pembrolizumab-based combination to Grade 1 or less (except alopecia) before trial treatment in Second Course Phase is started. If participant received major surgery or radiation therapy of \\>30 Gray (Gy), they must have recovered from the toxicity and/or complications of the intervention.",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "inc:b6",
+      "criterion_type": "inclusion",
+      "hardness": "procedural_pre_screen",
+      "arm_scope": null,
+      "source_text": "A female participant is eligible to enroll if she is not pregnant, not breastfeeding, and ≥1 of the following conditions applies: A woman of childbearing potential (WOCBP) who agrees to use contraception during the study treatment period and for ≥120 days (corresponding to time needed to eliminate any study combination treatment(s) plus 30 days (a menstruation cycle) for study treatments with risk of genotoxicity. Additional eligibility criteria for participants who enter dosing with Lenvatinib:",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "inc:b7",
+      "criterion_type": "inclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Adequately controlled blood pressure (BP) to \\<150/90 mmHg, with or without antihypertensive medications.",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "inc:b8",
+      "criterion_type": "inclusion",
+      "hardness": "procedural_pre_screen",
+      "arm_scope": null,
+      "source_text": "For male agrees to be abstinent from penile-vaginal intercourse OR agrees to use a highly effective contraceptive method while receiving study drug and for 7 days after the last dose of lenvatinib.",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "inc:b9",
+      "criterion_type": "inclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Is female and not pregnant/breastfeeding and at least one of the following applies during the study and for ≥4 days after: is not a woman of childbearing potential (WOCBP), is a WOCBP and uses highly effective contraception (low user dependency method OR a user dependent hormonal method in combination with a barrier method) or is a WOCBP who is abstinent from heterosexual intercourse.",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "exc:b0",
+      "criterion_type": "exclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "-There are no exclusion criteria to participate in MK-3475-587. Participants are excluded from entering Second Course trial treatment once they are enrolled on MK-3475-587 if any of the following criteria applies:",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "exc:b1",
+      "criterion_type": "exclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Has severe hypersensitivity (≥ Grade 3) to pembrolizumab and/or any of its excipients.",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "exc:b2",
+      "criterion_type": "exclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Has received a live vaccine within 30 days prior to the first dose of Second Course Phase trial treatment.",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "exc:b3",
+      "criterion_type": "exclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Has a diagnosis of immunodeficiency or is receiving chronic systemic steroid therapy (in dosing exceeding 10 mg daily of prednisone equivalent) or any other form of immunosuppressive therapy within 7 days prior to the Cycle 1 Day 1 of Second Course Phase.",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "exc:b4",
+      "criterion_type": "exclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Has a known additional malignancy that is progressing or requires active treatment. Exceptions include early stage cancers (carcinoma in situ or Stage 1) treated with curative intent, melanoma (non-ulcerated, thin primary), basal cell carcinoma of the skin, squamous cell carcinoma of the skin, in situ cervical cancer, or in situ breast cancer that has undergone potentially curative therapy.",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "exc:b5",
+      "criterion_type": "exclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Has known active central nervous system metastases and/or carcinomatous meningitis.",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "exc:b6",
+      "criterion_type": "exclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Has an active autoimmune disease that has required systemic treatment in the past 2 years (i.e., use of disease modifying agents, corticosteroids or immunosuppressive drugs). Replacement therapy (e.g. thyroxine, insulin, or physiologic corticosteroid replacement therapy for adrenal or pituitary insufficiency) is not considered a form of systemic treatment and is allowed.",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "exc:b7",
+      "criterion_type": "exclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Has a history of (non-infectious) pneumonitis that required steroids or has current pneumonitis. Note: Participants that experienced pneumonitis during First Course that did not meet the criteria for permanent discontinuation are eligible.",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "exc:b8",
+      "criterion_type": "exclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Non-small cell lung cancer (NSCLC) participants only: Has interstitial lung disease.",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "exc:b9",
+      "criterion_type": "exclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Has an active infection requiring systemic therapy.",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "exc:b10",
+      "criterion_type": "exclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Has a known history of human immunodeficiency virus (HIV) infection.",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "exc:b11",
+      "criterion_type": "exclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Has a known history of or is positive for hepatitis B or hepatitis C. For parent studies where inclusion of participants with hepatitis was permitted, MK-3475-587 will follow the parent study eligibility criteria for hepatitis.",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "exc:pregnant",
+      "criterion_type": "exclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "pregnant",
+      "atoms": [
+        {
+          "atom_id": "a",
+          "predicate_type": "simple_comparison",
+          "arm_scope": null,
+          "source_text": "pregnant",
+          "fact_key": "safety.pregnant",
+          "comparator": "eq",
+          "threshold": true
+        }
+      ],
+      "completeness_note": "complete"
+    },
+    {
+      "criterion_id": "exc:b13",
+      "criterion_type": "exclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Has severe cardiovascular disease, i.e., arrhythmias, requiring chronic treatment, congestive heart failure (New York Heart Association Class III or IV) or symptomatic ischemic heart disease.",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "exc:b14",
+      "criterion_type": "exclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Has hepatic decompensation (Child-Pugh score \\>6 \\[class B and C\\]).",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "exc:b15",
+      "criterion_type": "exclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Has uncontrolled thyroid dysfunction.",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "exc:b16",
+      "criterion_type": "exclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Has uncontrolled diabetes mellitus.",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "exc:b17",
+      "criterion_type": "exclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Has had an allogeneic tissue/solid organ transplant.",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "exc:b18",
+      "criterion_type": "exclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Has a known history of active tuberculosis (TB; Bacillus tuberculosis). Additional exclusion criteria for participants who enter dosing with Lenvatinib:",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "exc:b19",
+      "criterion_type": "exclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Has had major surgery within 3 weeks prior to first dose of study intervention(s).",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "exc:b20",
+      "criterion_type": "exclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Has preexisting ≥Grade 3 gastrointestinal or non-gastrointestinal fistula.",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "exc:b21",
+      "criterion_type": "exclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Has urine protein ≥1 g/24 hours.",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "exc:b22",
+      "criterion_type": "exclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Has LVEF below the institutional (or local laboratory) normal range, as determined by multigated acquisition scan (MUGA) or echocardiogram (ECHO).",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "exc:b23",
+      "criterion_type": "exclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Has radiographic evidence of encasement or invasion of a major blood vessel, or of intratumoral cavitation.",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "exc:b24",
+      "criterion_type": "exclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Prolongation of QT intervals corrected for heart rate using Fridericia's (cube root) correction (QTcF) interval to \\>480 ms.",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "exc:b25",
+      "criterion_type": "exclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Has clinically significant cardiovascular disease within 12 months from first dose of study intervention, including New York Heart Association Class III or IV congestive heart failure, unstable angina, myocardial infarction, cerebral vascular accident, or cardiac arrhythmia associated with hemodynamic instability.",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "exc:b26",
+      "criterion_type": "exclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Gastrointestinal malabsorption or any other condition that might affect the absorption of lenvatinib.",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "exc:b27",
+      "criterion_type": "exclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Active hemoptysis (bright red blood of at least 0.5 teaspoon) within 3 weeks prior to the first dose of study drug.",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "exc:b28",
+      "criterion_type": "exclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Has a history of any contraindication or has a severe hypersensitivity to any components of lenvatinib.",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    }
+  ]
+}

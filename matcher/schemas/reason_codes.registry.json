@@ -1,0 +1,40 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Avicenna Reason Codes Registry",
+  "description": "Registered reason codes for UNKNOWN and not_applicable outcomes (open set)",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "avicenna.reason-codes/0.1"
+    },
+    "codes": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "required": ["description", "category"],
+        "additionalProperties": false,
+        "properties": {
+          "description": {
+            "type": "string"
+          },
+          "category": {
+            "type": "string",
+            "enum": [
+              "evaluation_blocking",
+              "applicability",
+              "evidence_absent",
+              "evidence_ambiguous",
+              "evidence_conflict",
+              "evidence_stale",
+              "concept_unsupported",
+              "temporal",
+              "structural"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

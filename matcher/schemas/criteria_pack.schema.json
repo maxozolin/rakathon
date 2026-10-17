@@ -1,0 +1,405 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Avicenna Criteria Pack",
+  "description": "Trial eligibility criteria in structured form (avicenna.criteria-pack/0.1)",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "pack_id",
+    "trial_id",
+    "criteria_completeness",
+    "generated_at",
+    "arms",
+    "criteria"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "avicenna.criteria-pack/0.1"
+    },
+    "pack_id": {
+      "type": "string",
+      "description": "Unique identifier for this pack revision"
+    },
+    "trial_id": {
+      "type": "string",
+      "description": "Registry trial identifier (NCT or CTIS)"
+    },
+    "criteria_completeness": {
+      "type": "string",
+      "enum": [
+        "complete",
+        "partial"
+      ],
+      "description": "Whether all trial criteria were captured"
+    },
+    "generated_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "When the pack was generated"
+    },
+    "arms": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "arm_id",
+          "arm_name",
+          "study_type"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "arm_id": {
+            "type": "string",
+            "description": "Unique arm identifier within this pack"
+          },
+          "arm_name": {
+            "type": "string",
+            "description": "Display name of the arm"
+          },
+          "study_type": {
+            "type": "string",
+            "enum": [
+              "interventional",
+              "observational",
+              "observational_cohort",
+              "observational_case_control",
+              "observational_case_only"
+            ],
+            "description": "Type of study arm"
+          }
+        }
+      },
+      "description": "Trial arms this pack covers"
+    },
+    "criteria": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/Criterion"
+      },
+      "description": "All evaluable criteria"
+    }
+  },
+  "definitions": {
+    "Criterion": {
+      "type": "object",
+      "required": [
+        "criterion_id",
+        "criterion_type",
+        "hardness",
+        "arm_scope",
+        "source_text",
+        "atoms",
+        "completeness_note"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "criterion_id": {
+          "type": "string",
+          "description": "Unique identifier for this criterion within the pack"
+        },
+        "criterion_type": {
+          "type": "string",
+          "enum": [
+            "inclusion",
+            "exclusion"
+          ],
+          "description": "Type of criterion (inclusion \u2192 positive polarity, exclusion \u2192 negative polarity)"
+        },
+        "hardness": {
+          "type": "string",
+          "enum": [
+            "hard",
+            "procedural_pre_screen"
+          ],
+          "description": "Hardness: hard (must satisfy) | procedural_pre_screen (pre-screening, non-blocking)"
+        },
+        "arm_scope": {
+          "oneOf": [
+            {
+              "type": "null"
+            },
+            {
+              "type": "string"
+            }
+          ],
+          "description": "Null = whole trial; otherwise arm_id that this criterion applies to"
+        },
+        "source_text": {
+          "type": "string",
+          "description": "Verbatim or paraphrased source criterion text"
+        },
+        "atoms": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Atom"
+          },
+          "description": "Atomized predicates (may be empty for opaque criteria)"
+        },
+        "completeness_note": {
+          "type": "string",
+          "enum": [
+            "complete",
+            "partial",
+            "opaque_text"
+          ],
+          "description": "Whether this criterion was fully atomized"
+        },
+        "logic": {
+          "type": "object",
+          "required": [
+            "op"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "op": {
+              "type": "string",
+              "enum": [
+                "all",
+                "any",
+                "not",
+                "custom"
+              ]
+            },
+            "notes": {
+              "oneOf": [
+                {
+                  "type": "null"
+                },
+                {
+                  "type": "string"
+                }
+              ]
+            }
+          },
+          "description": "TRIAL_DATA_STANDARD \u00a76.1 fold over non-gate atoms. Absent is only valid with \u22641 non-gate atom; otherwise the criterion evaluates UNKNOWN (logic_unspecified)."
+        }
+      }
+    },
+    "Atom": {
+      "type": "object",
+      "required": [
+        "atom_id",
+        "predicate_type",
+        "arm_scope",
+        "source_text"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "atom_id": {
+          "type": "string",
+          "description": "Unique atom identifier within the criterion"
+        },
+        "predicate_type": {
+          "type": "string",
+          "enum": [
+            "simple_comparison",
+            "relative_to_reference",
+            "derived_value",
+            "guarded_case",
+            "not_exists",
+            "applicability_gate",
+            "procedural",
+            "criterion_ref"
+          ],
+          "description": "Type of predicate"
+        },
+        "arm_scope": {
+          "oneOf": [
+            {
+              "type": "null"
+            },
+            {
+              "type": "string"
+            }
+          ]
+        },
+        "source_text": {
+          "type": "string",
+          "description": "Verbatim or paraphrased source"
+        },
+        "fact_key": {
+          "type": "string",
+          "description": "The patient fact this atom evaluates (for simple_comparison, relative_to_reference, derived_value, not_exists)"
+        },
+        "comparator": {
+          "oneOf": [
+            {
+              "type": "null"
+            },
+            {
+              "type": "string",
+              "enum": [
+                "eq",
+                "ne",
+                "lt",
+                "le",
+                "gt",
+                "ge",
+                "in_set"
+              ]
+            }
+          ],
+          "description": "Comparison operator (for simple_comparison, relative_to_reference)"
+        },
+        "threshold": {
+          "description": "The comparison threshold (varies by type)"
+        },
+        "reference_key": {
+          "type": "string",
+          "description": "Reference fact key (for relative_to_reference)"
+        },
+        "reference_offset": {
+          "description": "Offset from reference (for relative_to_reference)"
+        },
+        "derived_expression": {
+          "type": "string",
+          "description": "Expression to derive the value (for derived_value)"
+        },
+        "guard_fact_key": {
+          "type": "string",
+          "description": "Fact key of the guard (for guarded_case)"
+        },
+        "guard_value": {
+          "description": "Guard value to check (for guarded_case)"
+        },
+        "cases": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "value",
+              "predicate"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "value": {
+                "description": "Guard value this case applies to"
+              },
+              "predicate": {
+                "$ref": "#/definitions/Atom"
+              }
+            }
+          },
+          "description": "Cases for guarded logic (for guarded_case)"
+        },
+        "scope": {
+          "oneOf": [
+            {
+              "type": "null"
+            },
+            {
+              "type": "object",
+              "description": "Scope for not_exists (e.g., time window, setting)"
+            }
+          ]
+        },
+        "gate_type": {
+          "type": "string",
+          "description": "Type of applicability gate (for applicability_gate)"
+        },
+        "gate_fact_key": {
+          "type": "string",
+          "description": "Fact key for the gate (for applicability_gate)"
+        },
+        "gate_value": {
+          "description": "Required value for applicability (for applicability_gate)"
+        },
+        "note": {
+          "type": "string",
+          "description": "Optional human-readable note"
+        },
+        "ref": {
+          "type": "object",
+          "required": [
+            "criterion_id",
+            "as"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "criterion_id": {
+              "type": "string"
+            },
+            "as": {
+              "type": "string",
+              "enum": [
+                "satisfied",
+                "triggered",
+                "predicate_true"
+              ]
+            }
+          },
+          "description": "TRIAL_DATA_STANDARD \u00a76.4.5 cross-criterion reference (for criterion_ref). Must be acyclic."
+        },
+        "relation": {
+          "type": "string",
+          "enum": [
+            "current",
+            "at_screening",
+            "any_history",
+            "ever",
+            "within_days_before_anchor"
+          ],
+          "description": "time_window.relation (\u00a74.5). Default: current for comparisons, any_history for not_exists."
+        },
+        "window_days": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Window for within_days_before_anchor"
+        },
+        "guard_scope": {
+          "type": "string",
+          "enum": [
+            "patient_fact",
+            "site_context"
+          ],
+          "description": "Where guard_fact_key / gate_fact_key is read from (\u00a76.4.3 when.scope). Default patient_fact."
+        },
+        "else": {
+          "$ref": "#/definitions/Atom",
+          "description": "Fallback branch for guarded_case (\u00a76.4.3 else)"
+        },
+        "quantifier": {
+          "type": "string",
+          "enum": [
+            "exists",
+            "latest"
+          ],
+          "description": "Required with relation=within_days_before_anchor: exists = some qualifying fact in the window; latest = the most recent fact in the window must satisfy. Absent \u2192 UNKNOWN (window_quantifier_unspecified)."
+        },
+        "reference_qualifier": {
+          "type": "string",
+          "enum": [
+            "reference_high",
+            "reference_low"
+          ],
+          "description": "relative_to_reference: read the patient-specific reference from the SAME fact's qualifiers (with qualifiers.reference_ucum_code equal to the value unit). Mutually exclusive with reference_key."
+        },
+        "assay": {
+          "type": "array",
+          "minItems": 1,
+          "items": {"type": "string", "minLength": 1},
+          "description": "Acceptable assays (exact match on the fact's qualifiers.assay). Facts of unstated or other assay are not evidence for this atom. Use only when the trial text names the assay/test."
+        },
+        "concept": {
+          "type": "object",
+          "required": [
+            "system",
+            "code"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "system": {
+              "type": "string"
+            },
+            "code": {
+              "type": "string"
+            }
+          },
+          "description": "Restrict candidate facts to those whose Fact.concept is this code (e.g. the marker of a biomarker.result). Facts without a matching concept are not evidence for this atom."
+        }
+      }
+    }
+  }
+}

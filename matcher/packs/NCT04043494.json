@@ -1,0 +1,165 @@
+{
+  "schema_version": "avicenna.criteria-pack/0.1",
+  "pack_id": "NCT04043494@2026-05-06/trial-pack-builder-llm/1.0.0",
+  "trial_id": "NCT04043494",
+  "criteria_completeness": "partial",
+  "generated_at": "2026-10-17T00:00:00Z",
+  "arms": [
+    {
+      "arm_id": "main",
+      "arm_name": "All participants",
+      "study_type": "interventional"
+    }
+  ],
+  "criteria": [
+    {
+      "criterion_id": "inc:age-max",
+      "criterion_type": "inclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "Maximum age: 18.0 Years (registry structured field)",
+      "atoms": [
+        {
+          "atom_id": "a",
+          "predicate_type": "simple_comparison",
+          "arm_scope": null,
+          "source_text": "Age ≤ 18.0 years",
+          "fact_key": "demographics.age",
+          "comparator": "le",
+          "threshold": {
+            "value": 18.0,
+            "unit": "a"
+          }
+        }
+      ],
+      "completeness_note": "complete"
+    },
+    {
+      "criterion_id": "inc:b0",
+      "criterion_type": "inclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "newly diagnosed lymphoblastic lymphoma",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "inc:b1",
+      "criterion_type": "inclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "age \\<18 years",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "inc:b2",
+      "criterion_type": "inclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "patient enrolled in a participating center",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "inc:b3",
+      "criterion_type": "inclusion",
+      "hardness": "procedural_pre_screen",
+      "arm_scope": null,
+      "source_text": "written informed consent of patient (\\>14 years of age or according to local law and regulation) and parents to trial participation and transfer and processing of data",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "inc:b4",
+      "criterion_type": "inclusion",
+      "hardness": "procedural_pre_screen",
+      "arm_scope": null,
+      "source_text": "willingness of patients and the investigator/pathologist to provide adequate slides/blocks for reference (molecular) pathology and international pathology panel and/or fresh or fresh frozen samples for genetic risk group stratification if these samples are available after standard diagnostic procedures.",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "exc:b0",
+      "criterion_type": "exclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "lymphoblastic lymphoma as secondary malignancy",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "exc:b1",
+      "criterion_type": "exclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "non-lymphoma related relevant medical, psychiatric or social conditions incompatible with trial treatment, including among others prior organ transplant severe immunodeficiency demyelinating Charcot-Marie Tooth syndrome serious acute or chronic infections, such as HIV, VZV and tuberculosis urinary tract infection, cystitis, urinary outflow obstruction, severe renal impairment (creatinine clearance less than 20 ml/min) severe hepatic impairment (bilirubin \\>3 times ULN, transaminases \\>10 times ULN) myocardial insufficiency, severe arrhythmias ulcers of the oral cavity and known active gastrointestinal ulcer disease known hypersensitivity to any IMP and to any excipient (listed in section 6.1 of the respective SmPC)",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "exc:b2",
+      "criterion_type": "exclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "steroid pre-treatment with ≥ 1 mg/kg/d for more than two weeks during the last month before diagnosis",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "exc:b3",
+      "criterion_type": "exclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "vaccination with live vaccines within 2 weeks before start of protocol treatment",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "exc:b4",
+      "criterion_type": "exclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "treatment started according to another protocol or pre-treatment with cytostatic drugs",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "exc:b5",
+      "criterion_type": "exclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "participation in another clinical trial that interferes with the protocol, except NHL-BFM Registry 2012 and trials with different endpoints, involving aspects of supportive treatment, which can run parallel to LBL 2018 without influencing the outcome of this trial (e.g. trials on antiemetics, antibiotics, strategies for psychosocial support)",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    },
+    {
+      "criterion_id": "exc:pregnant",
+      "criterion_type": "exclusion",
+      "hardness": "hard",
+      "arm_scope": null,
+      "source_text": "pregnancy",
+      "atoms": [
+        {
+          "atom_id": "a",
+          "predicate_type": "simple_comparison",
+          "arm_scope": null,
+          "source_text": "pregnancy",
+          "fact_key": "safety.pregnant",
+          "comparator": "eq",
+          "threshold": true
+        }
+      ],
+      "completeness_note": "complete"
+    },
+    {
+      "criterion_id": "exc:b7",
+      "criterion_type": "exclusion",
+      "hardness": "procedural_pre_screen",
+      "arm_scope": null,
+      "source_text": "sexually active adolescents not willing to use highly effective contraceptive method (pearl index \\< 1) until 12 months after end of cytostatic therapy",
+      "atoms": [],
+      "completeness_note": "opaque_text"
+    }
+  ]
+}

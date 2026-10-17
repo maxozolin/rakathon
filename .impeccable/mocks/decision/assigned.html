@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="cs"><head><meta charset="utf-8"><title>Na trase</title>
+<style>
+*{box-sizing:border-box;margin:0}
+body{width:390px;height:844px;overflow:hidden;font:16px/1.45 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:#f3f4f6;color:#16213f;display:flex;flex-direction:column}
+header{background:#16213f;color:#fff;padding:14px 18px 12px;display:flex;align-items:center;gap:12px;border-bottom:6px solid #f5b316}
+.mark{width:30px;height:30px;border-radius:50%;background:#f5b316;color:#16213f;font-weight:800;display:grid;place-items:center;font-size:15px}
+header b{font-size:19px;letter-spacing:.01em}
+header small{display:block;font-size:12px;opacity:.75;font-weight:500}
+.lang{margin-left:auto;font-size:13px;border:1.5px solid #ffffff55;border-radius:999px;padding:3px 10px;font-weight:600}
+main{flex:1;padding:22px 18px 0;overflow:hidden}
+h1{font-size:27px;line-height:1.15;font-weight:800;letter-spacing:-.01em}
+.lead{margin:8px 0 18px;color:#3b4561;font-size:15px}
+.line{position:relative;padding-left:34px;margin-bottom:22px}
+.line:before{content:"";position:absolute;left:11px;top:8px;bottom:8px;width:6px;background:#f5b316;border-radius:3px}
+.stop{position:relative;padding:4px 0 12px}
+.stop:before{content:"";position:absolute;left:-30px;top:6px;width:14px;height:14px;border-radius:50%;background:#fff;border:4px solid #16213f}
+.stop b{display:block;font-size:15px}
+.stop span{font-size:13.5px;color:#4b5573}
+.kicker{font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#4b5573;margin-bottom:8px}
+.sign{display:flex;align-items:center;gap:12px;background:#fff;border:1px solid #d6dae3;border-radius:10px;padding:12px 14px;margin-bottom:8px;font-weight:600;font-size:15px}
+.sign i{flex:none;width:26px;height:26px;border-radius:50%;background:#16213f;color:#f5b316;font-style:normal;font-weight:800;display:grid;place-items:center;font-size:13px}
+.sign em{margin-left:auto;font-style:normal;color:#16213f;font-weight:800}
+.composer{background:#fff;border-top:1px solid #d6dae3;padding:12px 14px 22px}
+.box{display:flex;align-items:center;gap:10px;border:2px solid #16213f;border-radius:14px;padding:10px 10px 10px 14px}
+.box span{flex:1;color:#6b7390}
+.clip{width:34px;height:34px;border-radius:10px;border:1px solid #d6dae3;display:grid;place-items:center;font-size:16px}
+.go{width:40px;height:40px;border-radius:10px;background:#f5b316;color:#16213f;font-weight:900;display:grid;place-items:center;font-size:18px}
+.note{font-size:11.5px;color:#4b5573;margin-top:8px;text-align:center}
+</style></head><body>
+<header><div class="mark">A</div><div><b>Avicenna</b><small>Klinické studie · průvodce</small></div><div class="lang">CS · EN</div></header>
+<main>
+<h1>Najdeme cestu ke studii, která by mohla dávat smysl.</h1>
+<p class="lead">Zeptejte se vlastními slovy. Odpovídáme z veřejných registrů studií v Česku.</p>
+<div class="line">
+ <div class="stop"><b>1 · Zeptejte se</b><span>diagnóza, věk, kde se léčíte</span></div>
+ <div class="stop"><b>2 · Přidejte zprávy</b><span>PDF nebo text, jen pro tento rozhovor</span></div>
+ <div class="stop"><b>3 · Probrat s lékařem</b><span>o zařazení rozhoduje vždy lékař</span></div>
+</div>
+<div class="kicker">Odjezdy · časté otázky</div>
+<div class="sign"><i>1</i>Studie pro děti s leukemií v Motole<em>›</em></div>
+<div class="sign"><i>2</i>Co znamená „nábor otevřen“?<em>›</em></div>
+<div class="sign"><i>3</i>Jak se připravit na rozhovor s lékařem<em>›</em></div>
+</main>
+<div class="composer"><div class="box"><div class="clip">⊕</div><span>Napište otázku…</span><div class="go">→</div></div>
+<p class="note">Informační nástroj, nenahrazuje lékaře.</p></div>
+</body></html>

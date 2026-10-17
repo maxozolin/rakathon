@@ -1,0 +1,641 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-17T10:18:31+00:00",
+  "title": "Design System: Avicenna Trial Pre-screen",
+  "source": "ui/consult.html",
+  "extensions": {
+    "colorMeta": {
+      "paper": {
+        "role": "neutral",
+        "displayName": "Report Paper",
+        "canonical": "oklch(0.984 0.004 230)",
+        "cssVar": "--paper",
+        "tonalRamp": [
+          "oklch(0.15 0.004 230)",
+          "oklch(0.26 0.004 230)",
+          "oklch(0.37 0.004 230)",
+          "oklch(0.48 0.004 230)",
+          "oklch(0.60 0.004 230)",
+          "oklch(0.72 0.004 230)",
+          "oklch(0.84 0.004 230)",
+          "oklch(0.95 0.004 230)"
+        ]
+      },
+      "paper-2": {
+        "role": "neutral",
+        "displayName": "Rail Paper",
+        "canonical": "oklch(0.958 0.008 235)",
+        "cssVar": "--paper-2",
+        "tonalRamp": [
+          "oklch(0.15 0.008 235)",
+          "oklch(0.26 0.008 235)",
+          "oklch(0.37 0.008 235)",
+          "oklch(0.48 0.008 235)",
+          "oklch(0.60 0.008 235)",
+          "oklch(0.72 0.008 235)",
+          "oklch(0.84 0.008 235)",
+          "oklch(0.95 0.008 235)"
+        ]
+      },
+      "band": {
+        "role": "neutral",
+        "displayName": "Row Band",
+        "canonical": "oklch(0.968 0.006 232)",
+        "cssVar": "--band",
+        "tonalRamp": [
+          "oklch(0.15 0.006 232)",
+          "oklch(0.26 0.006 232)",
+          "oklch(0.37 0.006 232)",
+          "oklch(0.48 0.006 232)",
+          "oklch(0.60 0.006 232)",
+          "oklch(0.72 0.006 232)",
+          "oklch(0.84 0.006 232)",
+          "oklch(0.95 0.006 232)"
+        ]
+      },
+      "rule": {
+        "role": "neutral",
+        "displayName": "Hairline",
+        "canonical": "oklch(0.885 0.01 240)",
+        "cssVar": "--rule",
+        "tonalRamp": [
+          "oklch(0.15 0.01 240)",
+          "oklch(0.26 0.01 240)",
+          "oklch(0.37 0.01 240)",
+          "oklch(0.48 0.01 240)",
+          "oklch(0.60 0.01 240)",
+          "oklch(0.72 0.01 240)",
+          "oklch(0.84 0.01 240)",
+          "oklch(0.95 0.01 240)"
+        ]
+      },
+      "rule-strong": {
+        "role": "neutral",
+        "displayName": "Section Rule",
+        "canonical": "oklch(0.78 0.015 245)",
+        "cssVar": "--rule-strong",
+        "tonalRamp": [
+          "oklch(0.15 0.015 245)",
+          "oklch(0.26 0.015 245)",
+          "oklch(0.37 0.015 245)",
+          "oklch(0.48 0.015 245)",
+          "oklch(0.60 0.015 245)",
+          "oklch(0.72 0.015 245)",
+          "oklch(0.84 0.015 245)",
+          "oklch(0.95 0.015 245)"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Report Ink",
+        "canonical": "oklch(0.24 0.03 252)",
+        "cssVar": "--ink",
+        "tonalRamp": [
+          "oklch(0.15 0.03 252)",
+          "oklch(0.26 0.03 252)",
+          "oklch(0.37 0.03 252)",
+          "oklch(0.48 0.03 252)",
+          "oklch(0.60 0.03 252)",
+          "oklch(0.72 0.03 252)",
+          "oklch(0.84 0.03 252)",
+          "oklch(0.95 0.03 252)"
+        ]
+      },
+      "ink-2": {
+        "role": "neutral",
+        "displayName": "Secondary Ink",
+        "canonical": "oklch(0.42 0.025 250)",
+        "cssVar": "--ink-2",
+        "tonalRamp": [
+          "oklch(0.15 0.025 250)",
+          "oklch(0.26 0.025 250)",
+          "oklch(0.37 0.025 250)",
+          "oklch(0.48 0.025 250)",
+          "oklch(0.60 0.025 250)",
+          "oklch(0.72 0.025 250)",
+          "oklch(0.84 0.025 250)",
+          "oklch(0.95 0.025 250)"
+        ]
+      },
+      "ink-3": {
+        "role": "neutral",
+        "displayName": "Muted Ink",
+        "canonical": "oklch(0.52 0.02 250)",
+        "cssVar": "--ink-3",
+        "tonalRamp": [
+          "oklch(0.15 0.02 250)",
+          "oklch(0.26 0.02 250)",
+          "oklch(0.37 0.02 250)",
+          "oklch(0.48 0.02 250)",
+          "oklch(0.60 0.02 250)",
+          "oklch(0.72 0.02 250)",
+          "oklch(0.84 0.02 250)",
+          "oklch(0.95 0.02 250)"
+        ]
+      },
+      "shell": {
+        "role": "neutral",
+        "displayName": "Navy Shell",
+        "canonical": "oklch(0.31 0.055 252)",
+        "cssVar": "--shell",
+        "tonalRamp": [
+          "oklch(0.15 0.055 252)",
+          "oklch(0.26 0.055 252)",
+          "oklch(0.37 0.055 252)",
+          "oklch(0.48 0.055 252)",
+          "oklch(0.60 0.055 252)",
+          "oklch(0.72 0.055 252)",
+          "oklch(0.84 0.055 252)",
+          "oklch(0.95 0.055 252)"
+        ]
+      },
+      "shell-ink": {
+        "role": "neutral",
+        "displayName": "Shell Ink",
+        "canonical": "oklch(0.97 0.01 240)",
+        "cssVar": "--shell-ink",
+        "tonalRamp": [
+          "oklch(0.15 0.01 240)",
+          "oklch(0.26 0.01 240)",
+          "oklch(0.37 0.01 240)",
+          "oklch(0.48 0.01 240)",
+          "oklch(0.60 0.01 240)",
+          "oklch(0.72 0.01 240)",
+          "oklch(0.84 0.01 240)",
+          "oklch(0.95 0.01 240)"
+        ]
+      },
+      "shell-ink-2": {
+        "role": "neutral",
+        "displayName": "Shell Secondary Ink",
+        "canonical": "oklch(0.84 0.03 245)",
+        "cssVar": "--shell-ink-2",
+        "tonalRamp": [
+          "oklch(0.15 0.03 245)",
+          "oklch(0.26 0.03 245)",
+          "oklch(0.37 0.03 245)",
+          "oklch(0.48 0.03 245)",
+          "oklch(0.60 0.03 245)",
+          "oklch(0.72 0.03 245)",
+          "oklch(0.84 0.03 245)",
+          "oklch(0.95 0.03 245)"
+        ]
+      },
+      "shell-rule": {
+        "role": "neutral",
+        "displayName": "Shell Rule",
+        "canonical": "oklch(0.40 0.05 252)",
+        "cssVar": "--shell-rule",
+        "tonalRamp": [
+          "oklch(0.15 0.05 252)",
+          "oklch(0.26 0.05 252)",
+          "oklch(0.37 0.05 252)",
+          "oklch(0.48 0.05 252)",
+          "oklch(0.60 0.05 252)",
+          "oklch(0.72 0.05 252)",
+          "oklch(0.84 0.05 252)",
+          "oklch(0.95 0.05 252)"
+        ]
+      },
+      "accent": {
+        "role": "primary",
+        "displayName": "Chart Blue",
+        "canonical": "oklch(0.50 0.16 256)",
+        "cssVar": "--accent",
+        "tonalRamp": [
+          "oklch(0.15 0.16 256)",
+          "oklch(0.26 0.16 256)",
+          "oklch(0.37 0.16 256)",
+          "oklch(0.48 0.16 256)",
+          "oklch(0.60 0.16 256)",
+          "oklch(0.72 0.16 256)",
+          "oklch(0.84 0.16 256)",
+          "oklch(0.95 0.16 256)"
+        ]
+      },
+      "accent-ink": {
+        "role": "primary",
+        "displayName": "Deep Chart Blue",
+        "canonical": "oklch(0.42 0.15 256)",
+        "cssVar": "--accent-ink",
+        "tonalRamp": [
+          "oklch(0.15 0.15 256)",
+          "oklch(0.26 0.15 256)",
+          "oklch(0.37 0.15 256)",
+          "oklch(0.48 0.15 256)",
+          "oklch(0.60 0.15 256)",
+          "oklch(0.72 0.15 256)",
+          "oklch(0.84 0.15 256)",
+          "oklch(0.95 0.15 256)"
+        ]
+      },
+      "accent-tint": {
+        "role": "primary",
+        "displayName": "Blue Wash",
+        "canonical": "oklch(0.945 0.03 256)",
+        "cssVar": "--accent-tint",
+        "tonalRamp": [
+          "oklch(0.15 0.03 256)",
+          "oklch(0.26 0.03 256)",
+          "oklch(0.37 0.03 256)",
+          "oklch(0.48 0.03 256)",
+          "oklch(0.60 0.03 256)",
+          "oklch(0.72 0.03 256)",
+          "oklch(0.84 0.03 256)",
+          "oklch(0.95 0.03 256)"
+        ]
+      },
+      "met": {
+        "role": "secondary",
+        "displayName": "Met Green",
+        "canonical": "oklch(0.46 0.11 152)",
+        "cssVar": "--met",
+        "tonalRamp": [
+          "oklch(0.15 0.11 152)",
+          "oklch(0.26 0.11 152)",
+          "oklch(0.37 0.11 152)",
+          "oklch(0.48 0.11 152)",
+          "oklch(0.60 0.11 152)",
+          "oklch(0.72 0.11 152)",
+          "oklch(0.84 0.11 152)",
+          "oklch(0.95 0.11 152)"
+        ]
+      },
+      "met-tint": {
+        "role": "secondary",
+        "displayName": "Met Wash",
+        "canonical": "oklch(0.935 0.045 152)",
+        "cssVar": "--met-tint",
+        "tonalRamp": [
+          "oklch(0.15 0.045 152)",
+          "oklch(0.26 0.045 152)",
+          "oklch(0.37 0.045 152)",
+          "oklch(0.48 0.045 152)",
+          "oklch(0.60 0.045 152)",
+          "oklch(0.72 0.045 152)",
+          "oklch(0.84 0.045 152)",
+          "oklch(0.95 0.045 152)"
+        ]
+      },
+      "fail": {
+        "role": "secondary",
+        "displayName": "Disqualifier Red",
+        "canonical": "oklch(0.50 0.18 27)",
+        "cssVar": "--fail",
+        "tonalRamp": [
+          "oklch(0.15 0.18 27)",
+          "oklch(0.26 0.18 27)",
+          "oklch(0.37 0.18 27)",
+          "oklch(0.48 0.18 27)",
+          "oklch(0.60 0.18 27)",
+          "oklch(0.72 0.18 27)",
+          "oklch(0.84 0.18 27)",
+          "oklch(0.95 0.18 27)"
+        ]
+      },
+      "fail-tint": {
+        "role": "secondary",
+        "displayName": "Disqualifier Wash",
+        "canonical": "oklch(0.94 0.04 27)",
+        "cssVar": "--fail-tint",
+        "tonalRamp": [
+          "oklch(0.15 0.04 27)",
+          "oklch(0.26 0.04 27)",
+          "oklch(0.37 0.04 27)",
+          "oklch(0.48 0.04 27)",
+          "oklch(0.60 0.04 27)",
+          "oklch(0.72 0.04 27)",
+          "oklch(0.84 0.04 27)",
+          "oklch(0.95 0.04 27)"
+        ]
+      },
+      "open": {
+        "role": "secondary",
+        "displayName": "Unresolved Amber",
+        "canonical": "oklch(0.50 0.11 68)",
+        "cssVar": "--open",
+        "tonalRamp": [
+          "oklch(0.15 0.11 68)",
+          "oklch(0.26 0.11 68)",
+          "oklch(0.37 0.11 68)",
+          "oklch(0.48 0.11 68)",
+          "oklch(0.60 0.11 68)",
+          "oklch(0.72 0.11 68)",
+          "oklch(0.84 0.11 68)",
+          "oklch(0.95 0.11 68)"
+        ]
+      },
+      "open-fill": {
+        "role": "secondary",
+        "displayName": "Hatch Amber",
+        "canonical": "oklch(0.80 0.13 80)",
+        "cssVar": "--open-fill",
+        "tonalRamp": [
+          "oklch(0.15 0.13 80)",
+          "oklch(0.26 0.13 80)",
+          "oklch(0.37 0.13 80)",
+          "oklch(0.48 0.13 80)",
+          "oklch(0.60 0.13 80)",
+          "oklch(0.72 0.13 80)",
+          "oklch(0.84 0.13 80)",
+          "oklch(0.95 0.13 80)"
+        ]
+      },
+      "open-tint": {
+        "role": "secondary",
+        "displayName": "Amber Wash",
+        "canonical": "oklch(0.955 0.05 85)",
+        "cssVar": "--open-tint",
+        "tonalRamp": [
+          "oklch(0.15 0.05 85)",
+          "oklch(0.26 0.05 85)",
+          "oklch(0.37 0.05 85)",
+          "oklch(0.48 0.05 85)",
+          "oklch(0.60 0.05 85)",
+          "oklch(0.72 0.05 85)",
+          "oklch(0.84 0.05 85)",
+          "oklch(0.95 0.05 85)"
+        ]
+      },
+      "na": {
+        "role": "secondary",
+        "displayName": "Screening Grey",
+        "canonical": "oklch(0.55 0.012 250)",
+        "cssVar": "--na",
+        "tonalRamp": [
+          "oklch(0.15 0.012 250)",
+          "oklch(0.26 0.012 250)",
+          "oklch(0.37 0.012 250)",
+          "oklch(0.48 0.012 250)",
+          "oklch(0.60 0.012 250)",
+          "oklch(0.72 0.012 250)",
+          "oklch(0.84 0.012 250)",
+          "oklch(0.95 0.012 250)"
+        ]
+      },
+      "na-tint": {
+        "role": "secondary",
+        "displayName": "Grey Wash",
+        "canonical": "oklch(0.94 0.005 250)",
+        "cssVar": "--na-tint",
+        "tonalRamp": [
+          "oklch(0.15 0.005 250)",
+          "oklch(0.26 0.005 250)",
+          "oklch(0.37 0.005 250)",
+          "oklch(0.48 0.005 250)",
+          "oklch(0.60 0.005 250)",
+          "oklch(0.72 0.005 250)",
+          "oklch(0.84 0.005 250)",
+          "oklch(0.95 0.005 250)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Selected trial short name; one per screen."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Patient summary in the patient strip."
+      },
+      "verdict": {
+        "displayName": "Verdict",
+        "purpose": "Verdict word with glyph in the verdict panel."
+      },
+      "section": {
+        "displayName": "Section",
+        "purpose": "Flowsheet title."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Lede, regimen and running text; tabular figures."
+      },
+      "body-sm": {
+        "displayName": "Body Sm",
+        "purpose": "Flowsheet cells, patient facts, check-next text."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Rail verdict words, rail and legend headings, filter options."
+      },
+      "caption": {
+        "displayName": "Caption",
+        "purpose": "Table head, evidence date and source, criterion meta, counts."
+      },
+      "code": {
+        "displayName": "Code",
+        "purpose": "Criterion IDs, reason codes, engine notes."
+      }
+    },
+    "shadows": [
+      {
+        "name": "button-lift",
+        "value": "0 1px 2px oklch(0.3 0.08 256 / 0.25)",
+        "purpose": "Primary button only; removed when disabled."
+      },
+      {
+        "name": "selected-segment",
+        "value": "0 1px 2px oklch(0.3 0.03 250 / 0.14), 0 0 0 1px var(--rule)",
+        "purpose": "Checked option in the segmented filter."
+      },
+      {
+        "name": "bottom-bar",
+        "value": "0 -4px 12px oklch(0.3 0.03 250 / 0.08)",
+        "purpose": "Fixed mobile action bar over scrolling content."
+      },
+      {
+        "name": "current-ring",
+        "value": "inset 0 0 0 1px oklch(0.5 0.16 256 / 0.45)",
+        "purpose": "Full inset ring on the current trial; the selection mark instead of a side stripe."
+      },
+      {
+        "name": "unresolved-ring",
+        "value": "inset 0 0 0 1px oklch(0.7 0.12 75)",
+        "purpose": "Ring around hatched unresolved strip cells."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-out",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "The only easing (--ease)."
+      },
+      {
+        "name": "state-change",
+        "value": "150ms",
+        "purpose": "Fill, border and colour transitions on hover and selection."
+      },
+      {
+        "name": "disclosure",
+        "value": "180ms",
+        "purpose": "Details chevron rotating 90° when expanded."
+      },
+      {
+        "name": "jump-scroll",
+        "value": "smooth",
+        "purpose": "Check-next item scrolls its flowsheet row to centre; instant under reduced motion."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "0.01ms",
+        "purpose": "All transitions collapse under prefers-reduced-motion."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "stack-verdict",
+        "value": "1080px",
+        "purpose": "Verdict panel to one column; shell meta hidden."
+      },
+      {
+        "name": "single-column",
+        "value": "860px",
+        "purpose": "Horizontal rail, card-grid flowsheet rows, fixed bottom action bar."
+      }
+    ],
+    "patterns": [
+      {
+        "name": "unresolved-hatch",
+        "value": "repeating-linear-gradient(135deg, var(--open-fill) 0 2px, oklch(0.9 0.08 85) 2px 4px)",
+        "purpose": "Non-colour cue for unresolved in flag strips."
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The single primary action per screen: refer to the trial coordinator.",
+      "html": "<button class=\"ds-btn ds-btn-primary\" type=\"button\"><svg width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.75\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M13.5 2.5 7 9M13.5 2.5 9.5 13.5 7 9 2.5 6.5z\"/></svg>Refer to Trial Coordinator</button>",
+      "css": ".ds-btn{font:600 .875rem/1.5 \"Segoe UI Variable Text\",\"SF Pro Text\",system-ui,-apple-system,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif;display:inline-flex;align-items:center;gap:.45rem;padding:.5rem .875rem;border-radius:4px;cursor:pointer;border:1px solid var(--rule-strong);background:var(--paper);color:var(--ink);transition:background-color 150ms cubic-bezier(0.16,1,0.3,1),border-color 150ms cubic-bezier(0.16,1,0.3,1)}.ds-btn:focus-visible{outline:2px solid var(--accent);outline-offset:2px;}.ds-btn-primary{background:var(--accent);border-color:var(--accent);color:#fff;box-shadow:0 1px 2px oklch(0.3 0.08 256 / 0.25)}.ds-btn-primary:hover{background:var(--accent-ink);border-color:var(--accent-ink)}.ds-btn-primary:active{background:oklch(0.38 0.14 256)}"
+    },
+    {
+      "name": "Secondary Button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Bordered paper button for secondary actions such as Copy Summary.",
+      "html": "<button class=\"ds-btn\" type=\"button\"><svg width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.75\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><rect x=\"5.5\" y=\"5.5\" width=\"8\" height=\"8\" rx=\"1\"/><path d=\"M10.5 5.5v-2a1 1 0 0 0-1-1h-6a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2\"/></svg>Copy Summary</button>",
+      "css": ".ds-btn{font:600 .875rem/1.5 \"Segoe UI Variable Text\",\"SF Pro Text\",system-ui,-apple-system,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif;display:inline-flex;align-items:center;gap:.45rem;padding:.5rem .875rem;border-radius:4px;cursor:pointer;border:1px solid var(--rule-strong);background:var(--paper);color:var(--ink);transition:background-color 150ms cubic-bezier(0.16,1,0.3,1),border-color 150ms cubic-bezier(0.16,1,0.3,1)}.ds-btn:focus-visible{outline:2px solid var(--accent);outline-offset:2px;}.ds-btn:hover{background:var(--paper-2);border-color:var(--ink-3)}.ds-btn:active{background:var(--rule)}"
+    },
+    {
+      "name": "Segmented Filter",
+      "kind": "chip",
+      "refersTo": "segmented-filter",
+      "description": "Radio group filtering the flowsheet, with counts.",
+      "html": "<fieldset class=\"ds-seg\"><legend style=\"position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)\">Show criteria</legend><label><input type=\"radio\" name=\"ds-f\" checked><span>All<b>15</b></span></label><label><input type=\"radio\" name=\"ds-f\"><span>Needs attention<b>4</b></span></label><label><input type=\"radio\" name=\"ds-f\"><span>Met or ruled out<b>11</b></span></label></fieldset>",
+      "css": ".ds-seg{margin:0;display:inline-flex;border:1px solid var(--rule-strong);border-radius:4px;padding:2px;background:var(--paper-2);font:550 .8125rem/1.5 \"Segoe UI Variable Text\",\"SF Pro Text\",system-ui,-apple-system,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif}.ds-seg label{position:relative}.ds-seg input{position:absolute;opacity:0;inset:0;margin:0;cursor:pointer}.ds-seg span{display:block;padding:.3rem .7rem;color:var(--ink-2);border-radius:3px;transition:background-color 150ms cubic-bezier(0.16,1,0.3,1),color 150ms cubic-bezier(0.16,1,0.3,1);white-space:nowrap}.ds-seg label:hover span{color:var(--ink)}.ds-seg input:checked+span{background:var(--paper);color:var(--ink);box-shadow:0 1px 2px oklch(0.3 0.03 250 / 0.14),0 0 0 1px var(--rule)}.ds-seg input:focus-visible+span{outline:2px solid var(--accent);outline-offset:1px}.ds-seg b{font-weight:600;margin-left:.3rem;color:var(--ink-3)}"
+    },
+    {
+      "name": "Trial Rail Entry",
+      "kind": "nav",
+      "refersTo": "trial-link-current",
+      "description": "Rail entries with verdict word and flag strip; current entry is tinted with a full inset ring, never a side stripe.",
+      "html": "<ol class=\"ds-rail\"><li><a class=\"ds-trial\" href=\"#\" aria-current=\"page\"><span class=\"ds-top\"><span class=\"ds-name\">CodeBreaK 301</span><span class=\"ds-id\">NCT06252649</span></span><span class=\"ds-foot\"><span class=\"ds-verdict ds-v-open\"><svg width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M6 6.2a2.1 2.1 0 1 1 3 1.9c-.6.3-1 .8-1 1.5v.4\"/><path d=\"M8 12.2v.05\"/></svg>Manual review</span><span class=\"ds-strip\" aria-hidden=\"true\"><i class=\"ds-g-ok\"></i><i class=\"ds-g-ok\"></i><i class=\"ds-g-ok\"></i><i class=\"ds-g-open\"></i><i class=\"ds-g-ok\"></i><i class=\"ds-gap\"></i><i class=\"ds-g-ok\"></i><i class=\"ds-g-fail\"></i><i class=\"ds-g-open\"></i><i class=\"ds-g-na\"></i></span></span></a></li><li><a class=\"ds-trial\" href=\"#\"><span class=\"ds-top\"><span class=\"ds-name\">FORAGER-2</span><span class=\"ds-id\">NCT07218380</span></span><span class=\"ds-foot\"><span class=\"ds-verdict ds-v-fail\"><svg width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"m4.5 4.5 7 7m0-7-7 7\"/></svg>Ineligible</span><span class=\"ds-strip\" aria-hidden=\"true\"><i class=\"ds-g-ok\"></i><i class=\"ds-g-ok\"></i><i class=\"ds-g-ok\"></i><i class=\"ds-g-open\"></i><i class=\"ds-g-ok\"></i><i class=\"ds-gap\"></i><i class=\"ds-g-ok\"></i><i class=\"ds-g-fail\"></i><i class=\"ds-g-open\"></i><i class=\"ds-g-na\"></i></span></span></a></li></ol>",
+      "css": ".ds-rail{list-style:none;margin:0;padding:0;background:var(--paper-2);width:21.5rem;font:400 .9375rem/1.5 \"Segoe UI Variable Text\",\"SF Pro Text\",system-ui,-apple-system,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif}.ds-trial{display:grid;gap:.35rem;padding:.875rem 1.25rem .9375rem;color:var(--ink);text-decoration:none;border-top:1px solid var(--rule);transition:background-color 150ms cubic-bezier(0.16,1,0.3,1)}.ds-trial:hover{background:oklch(0.935 0.01 240)}.ds-trial:focus-visible{outline:2px solid var(--accent);outline-offset:2px;}.ds-trial[aria-current=page]{background:var(--accent-tint);box-shadow:inset 0 0 0 1px oklch(0.5 0.16 256 / 0.45)}.ds-trial[aria-current=page] .ds-name{color:var(--accent-ink)}.ds-top,.ds-foot{display:flex;justify-content:space-between;gap:.75rem;align-items:center}.ds-name{font-weight:620}.ds-id{font-size:.75rem;color:var(--ink-2)}.ds-verdict{display:inline-flex;align-items:center;gap:.35rem;font-size:.8125rem;font-weight:600}.ds-verdict svg{width:15px;height:15px}.ds-v-open{color:var(--open)}.ds-v-fail{color:var(--fail)}.ds-strip{display:flex;gap:2px;height:.875rem}.ds-strip i{width:.4375rem;border-radius:1px;display:block}.ds-g-ok{background:var(--met)}.ds-g-fail{background:var(--fail)}.ds-g-open{background:repeating-linear-gradient(135deg,var(--open-fill) 0 2px,oklch(0.9 0.08 85) 2px 4px);box-shadow:inset 0 0 0 1px oklch(0.7 0.12 75)}.ds-g-na{box-shadow:inset 0 0 0 1px var(--rule-strong)}.ds-strip .ds-gap{width:.375rem}"
+    },
+    {
+      "name": "Flag Strip",
+      "kind": "custom",
+      "refersTo": "flag-strip-cell",
+      "description": "Signature: one cell per criterion, inclusion, gap, exclusion; unresolved is hatched.",
+      "html": "<span class=\"ds-strip\" aria-hidden=\"true\"><i class=\"ds-g-ok\"></i><i class=\"ds-g-ok\"></i><i class=\"ds-g-ok\"></i><i class=\"ds-g-open\"></i><i class=\"ds-g-ok\"></i><i class=\"ds-gap\"></i><i class=\"ds-g-ok\"></i><i class=\"ds-g-fail\"></i><i class=\"ds-g-open\"></i><i class=\"ds-g-na\"></i></span>",
+      "css": ".ds-strip{display:flex;gap:2px;height:.875rem}.ds-strip i{width:.4375rem;border-radius:1px;display:block}.ds-g-ok{background:var(--met)}.ds-g-fail{background:var(--fail)}.ds-g-open{background:repeating-linear-gradient(135deg,var(--open-fill) 0 2px,oklch(0.9 0.08 85) 2px 4px);box-shadow:inset 0 0 0 1px oklch(0.7 0.12 75)}.ds-g-na{box-shadow:inset 0 0 0 1px var(--rule-strong)}.ds-strip .ds-gap{width:.375rem}"
+    },
+    {
+      "name": "Flowsheet Flags",
+      "kind": "custom",
+      "refersTo": "flag-ok",
+      "description": "The four flowsheet flag tiles; each pairs a state ink with a glyph and a hidden word.",
+      "html": "<div class=\"ds-flags\"><span class=\"ds-flag ds-f-ok\"><svg width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"m3.5 8.5 3 3 6-7\"/></svg><span class=\"ds-sr\">Met</span></span><span class=\"ds-flag ds-f-open\"><svg width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M6 6.2a2.1 2.1 0 1 1 3 1.9c-.6.3-1 .8-1 1.5v.4\"/><path d=\"M8 12.2v.05\"/></svg><span class=\"ds-sr\">Unresolved</span></span><span class=\"ds-flag ds-f-fail\"><svg width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"m4.5 4.5 7 7m0-7-7 7\"/></svg><span class=\"ds-sr\">Disqualifies</span></span><span class=\"ds-flag ds-f-na\"><svg width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.25\" stroke-linecap=\"round\" aria-hidden=\"true\"><path d=\"M4.5 8h7\"/></svg><span class=\"ds-sr\">At screening</span></span></div>",
+      "css": ".ds-flags{display:flex;gap:.5rem}.ds-flag{width:1.75rem;height:1.75rem;border-radius:3px;display:grid;place-items:center}.ds-f-ok{background:var(--met-tint);color:var(--met)}.ds-f-fail{background:var(--fail);color:#fff}.ds-f-open{background:var(--open-tint);color:var(--open);box-shadow:inset 0 0 0 1px oklch(0.82 0.1 80)}.ds-f-na{background:var(--na-tint);color:var(--na)}.ds-sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}"
+    },
+    {
+      "name": "Flowsheet Row",
+      "kind": "card",
+      "refersTo": "flowsheet-row",
+      "description": "A ruled flowsheet: flag column, trial wording with the checked span underlined, dated evidence, assessment.",
+      "html": "<table class=\"ds-sheet\"><thead><tr><th></th><th>Trial criterion</th><th>Patient evidence</th><th>Assessment</th></tr></thead><tbody><tr><td><span class=\"ds-flag ds-f-ok\"><svg width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"m3.5 8.5 3 3 6-7\"/></svg></span></td><td>ECOG Performance Status of <mark>≤ 1</mark>.</td><td><b>ECOG 0</b><div class=\"ds-meta\">25 Mar 2026 · structured · Unreviewed</div></td><td><div class=\"ds-a ds-a-ok\">Met</div><div class=\"ds-meta\">Recorded evidence meets this requirement.</div></td></tr><tr><td><span class=\"ds-flag ds-f-open\"><svg width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M6 6.2a2.1 2.1 0 1 1 3 1.9c-.6.3-1 .8-1 1.5v.4\"/><path d=\"M8 12.2v.05\"/></svg></span></td><td>Adequate organ function.</td><td><span class=\"ds-none\">No matching data in record</span></td><td><div class=\"ds-a ds-a-open\">Read trial wording</div><div class=\"ds-meta\">Not broken into checkable parts.</div></td></tr></tbody></table>",
+      "css": ".ds-sheet{border-collapse:collapse;font:400 .875rem/1.5 \"Segoe UI Variable Text\",\"SF Pro Text\",system-ui,-apple-system,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif;color:var(--ink);font-variant-numeric:tabular-nums}.ds-sheet th{text-align:left;font-size:.75rem;font-weight:600;color:var(--ink-2);padding:.5rem .75rem;border-bottom:1px solid var(--rule-strong);background:var(--paper)}.ds-sheet td{padding:.625rem .75rem;border-bottom:1px solid var(--rule);vertical-align:top;background:var(--paper)}.ds-sheet tbody tr:nth-child(even) td{background:var(--band)}.ds-sheet mark{background:none;color:var(--ink);font-weight:560;text-decoration:underline;text-decoration-color:var(--rule-strong);text-underline-offset:.2em}.ds-meta{font-size:.75rem;color:var(--ink-2)}.ds-none{color:var(--ink-3);font-size:.8125rem}.ds-a{font-weight:600}.ds-a-ok{color:var(--met)}.ds-a-open{color:var(--open)}.ds-flag{width:1.75rem;height:1.75rem;border-radius:3px;display:grid;place-items:center}.ds-f-ok{background:var(--met-tint);color:var(--met)}.ds-f-open{background:var(--open-tint);color:var(--open);box-shadow:inset 0 0 0 1px oklch(0.82 0.1 80)}"
+    },
+    {
+      "name": "Verdict Panel",
+      "kind": "custom",
+      "refersTo": "verdict-panel",
+      "description": "Verdict word, lede, coverage strip and the fixed caveat; never a bare eligible.",
+      "html": "<section class=\"ds-verdict-panel\"><p class=\"ds-vbig\"><svg width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M6 6.2a2.1 2.1 0 1 1 3 1.9c-.6.3-1 .8-1 1.5v.4\"/><path d=\"M8 12.2v.05\"/></svg>Manual review</p><p class=\"ds-lede\">Nothing disqualifies on recorded evidence. 4 criteria still block pre-screening.</p><span class=\"ds-strip\" aria-hidden=\"true\"><i class=\"ds-g-ok\"></i><i class=\"ds-g-ok\"></i><i class=\"ds-g-ok\"></i><i class=\"ds-g-open\"></i><i class=\"ds-g-ok\"></i><i class=\"ds-gap\"></i><i class=\"ds-g-ok\"></i><i class=\"ds-g-fail\"></i><i class=\"ds-g-open\"></i><i class=\"ds-g-na\"></i></span><p class=\"ds-cov\">11 of 15 applicable criteria assessed from the record.</p><p class=\"ds-cav\">The best result this tool gives is “eligible, pending review”. It pre-screens; the trial site decides eligibility.</p></section>",
+      "css": ".ds-verdict-panel{font:400 .9375rem/1.5 \"Segoe UI Variable Text\",\"SF Pro Text\",system-ui,-apple-system,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif;color:var(--ink);padding:1.25rem 0 1.375rem;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);max-width:34rem}.ds-vbig{margin:0;display:flex;align-items:center;gap:.5rem;font-size:1.25rem;font-weight:680;letter-spacing:-.01em;color:var(--open)}.ds-vbig svg{width:20px;height:20px}.ds-lede{margin:.5rem 0 1rem}.ds-cov,.ds-cav{margin:.4rem 0 0;font-size:.8125rem;color:var(--ink-2)}.ds-cav{margin-top:.75rem}.ds-strip{display:flex;gap:2px;height:1.125rem}.ds-strip i{width:.4375rem;border-radius:1px;display:block}.ds-g-ok{background:var(--met)}.ds-g-fail{background:var(--fail)}.ds-g-open{background:repeating-linear-gradient(135deg,var(--open-fill) 0 2px,oklch(0.9 0.08 85) 2px 4px);box-shadow:inset 0 0 0 1px oklch(0.7 0.12 75)}.ds-g-na{box-shadow:inset 0 0 0 1px var(--rule-strong)}.ds-strip .ds-gap{width:.375rem}"
+    },
+    {
+      "name": "Mobile Action Bar",
+      "kind": "custom",
+      "refersTo": "mobile-action-bar",
+      "description": "Under 860px the actions dock to the bottom with a status toast above.",
+      "html": "<div class=\"ds-dock\"><p class=\"ds-toast\">Summary copied to the clipboard.</p><div class=\"ds-bar\"><button class=\"ds-btn\" type=\"button\"><svg width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.75\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><rect x=\"5.5\" y=\"5.5\" width=\"8\" height=\"8\" rx=\"1\"/><path d=\"M10.5 5.5v-2a1 1 0 0 0-1-1h-6a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2\"/></svg>Copy Summary</button><button class=\"ds-btn ds-btn-primary\" type=\"button\"><svg width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.75\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M13.5 2.5 7 9M13.5 2.5 9.5 13.5 7 9 2.5 6.5z\"/></svg>Refer</button></div></div>",
+      "css": ".ds-btn{font:600 .875rem/1.5 \"Segoe UI Variable Text\",\"SF Pro Text\",system-ui,-apple-system,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif;display:inline-flex;align-items:center;gap:.45rem;padding:.5rem .875rem;border-radius:4px;cursor:pointer;border:1px solid var(--rule-strong);background:var(--paper);color:var(--ink);transition:background-color 150ms cubic-bezier(0.16,1,0.3,1),border-color 150ms cubic-bezier(0.16,1,0.3,1)}.ds-btn:focus-visible{outline:2px solid var(--accent);outline-offset:2px;}.ds-btn{flex:1 1 0;justify-content:center}.ds-btn-primary{background:var(--accent);border-color:var(--accent);color:#fff}.ds-dock{width:22rem}.ds-bar{display:flex;gap:.5rem;padding:.625rem 1rem;background:oklch(0.984 0.004 230 / 0.96);border-top:1px solid var(--rule-strong);box-shadow:0 -4px 12px oklch(0.3 0.03 250 / 0.08)}.ds-toast{margin:0 1rem .5rem;background:var(--ink);color:var(--paper);padding:.5rem .75rem;border-radius:4px;font:400 .8125rem/1.5 \"Segoe UI Variable Text\",\"SF Pro Text\",system-ui,-apple-system,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Cumulative Lab Report",
+    "overview": "**Creative North Star: \"The Cumulative Lab Report\"**\n\nThe screen reads like the cumulative results sheet a clinician already trusts: a dark institutional header, a patient strip, then a ruled flowsheet where every criterion is a row with a flag in its own column, the source wording, the evidence with its date and provenance, and the assessment. Nothing is a card and nothing floats. Hierarchy comes from rules, bands and type weight on cool paper, the way a printed lab report separates sections with hairlines rather than boxes.\n\nDensity is clinical: 15px body, 14px table text, tabular figures everywhere, generous line height, and tight but regular vertical rhythm. Colour is reserved for state. The four outcome inks (met green, disqualifier red, unresolved amber, not-blocking grey) are the only saturated hues besides the single blue used for interaction and selection. Unknown is drawn, not implied: an unresolved criterion carries a question glyph in the flowsheet and a hatched cell in every flag strip, so it never reads as either a pass or a fail.\n\nThe signature is the flag strip: one small cell per criterion, inclusion criteria first, a gap, then exclusion criteria, in trial order. It appears in each trial rail entry and, larger, in the verdict panel, so a clinician can compare the shape of three trials at a glance before reading a word.",
+    "keyCharacteristics": [
+      "Ruled flowsheet, not cards: hairline rules and alternate row bands carry structure.",
+      "Four state inks, each paired with a glyph, and a hatched fill for unresolved.",
+      "One interaction blue for links, focus, primary action and current selection.",
+      "Flat surfaces; depth only from the dark shell, the paper-2 rail and three small functional shadows.",
+      "Tabular figures and dated, sourced evidence on every row."
+    ],
+    "rules": [
+      {
+        "name": "The State Ink Rule",
+        "body": "Green, red, amber and grey mean criterion or verdict state and nothing else. They are never decoration, never a brand accent, never a section colour.",
+        "section": "colors"
+      },
+      {
+        "name": "The Never By Colour Alone Rule",
+        "body": "Every state ink travels with a glyph (check, cross, question, dash) and a word. A flowsheet flag without its glyph, or a verdict without its word, is a defect.",
+        "section": "colors"
+      },
+      {
+        "name": "The One Blue Rule",
+        "body": "Interaction and selection share one hue. Nothing else on the page is blue.",
+        "section": "colors"
+      },
+      {
+        "name": "The Tabular Rule",
+        "body": "Figures are tabular everywhere (`font-variant-numeric: tabular-nums` on body), so counts, dates and ECOG values align down a column.",
+        "section": "typography"
+      },
+      {
+        "name": "The Weight Ladder Rule",
+        "body": "Emphasis is a weight step (550, 600, 620, 650, 680), not colour, italics or capitals. Sentence case throughout; no uppercase labels.",
+        "section": "typography"
+      },
+      {
+        "name": "The Ruled Not Boxed Rule",
+        "body": "Sections are separated by hairlines and bands, never by floating cards or drop shadows. Shadows exist only on the three controls above.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "**Do** reserve `met`, `fail`, `open` and `na` (and their tints) for criterion and verdict state, each paired with its glyph and its word.",
+      "**Do** draw unresolved as hatching (135°, 2px bands of `open-fill` and pale amber inside an amber ring) wherever state is shown as a cell without a glyph, so unknown never reads as met or failed in greyscale.",
+      "**Do** write the best verdict as \"Eligible, pending review\" and keep the caveat that the trial site decides.",
+      "**Do** mark selection with `accent-tint` plus a full 1px inset ring (current trial) or a full-row tint (jump target).",
+      "**Do** separate sections with `rule` and `rule-strong` hairlines and alternate `band` rows, on flat paper.",
+      "**Do** show every evidence value with its date, its source and whether it was reviewed.",
+      "**Do** keep figures tabular and emphasis as a weight step.",
+      "**Do** keep the flag strip in trial order: inclusion, gap, exclusion."
+    ],
+    "donts": [
+      "**Don't** use the state inks as decoration, section colour or brand colour, and don't introduce a fifth state hue.",
+      "**Don't** show state by colour alone; a flag without its glyph and hidden word, or a strip without a verdict word or count sentence beside it, is incomplete.",
+      "**Don't** render a bare \"Eligible\", a percentage score or a ranking number.",
+      "**Don't** fold unresolved into met or failed counts, colours or icons.",
+      "**Don't** mark selection or state with a coloured side stripe (a thick left or right border on a row or entry).",
+      "**Don't** put criteria, trials or the verdict in floating cards or behind drop shadows beyond the three listed.",
+      "**Don't** use blue for anything that is not interactive or selected."
+    ]
+  }
+}
